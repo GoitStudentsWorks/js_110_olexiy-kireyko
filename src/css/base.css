@@ -7,6 +7,8 @@
   --hover-green: #009156;
   --error: #e74a3b;
   --hover-grey: #bbbbbb;
+  --font-main: 'Poppins';
+  --font-second: 'Impact';
 
   --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -18,7 +20,7 @@ body {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-main) ,sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -34,7 +36,7 @@ body {
 }
 
 @font-face {
-  font-family: 'Impact';
+  font-family: var(--font-second) , sans-serif;
   src: url('./fonts/impact.ttf') format('truetype');
   font-style: normal;
 }
@@ -58,7 +60,7 @@ input:focus {
 }
 
 h1 {
-  font-family: 'Impact', sans-serif;
+  font-family: var(--font-second), sans-serif;
   font-weight: 400;
   font-size: 64px;
   line-height: 1.25;
@@ -67,7 +69,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Impact', sans-serif;
+  font-family: var(--font-second), sans-serif;
   font-weight: 400;
   font-size: 52px;
   line-height: 1.23;
@@ -76,7 +78,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'var(--font-main)', sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 1.25;
@@ -123,3 +125,5 @@ h3 {
     padding-bottom: 164px;
   }
 }
+
+
