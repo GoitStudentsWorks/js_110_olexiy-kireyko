@@ -9,8 +9,13 @@
   flex-direction: column;
 }
 
+.footer__content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer__header {
-  font-family: 'Impact', sans-serif;
+  font-family: var(--font-second), sans-serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 1;
@@ -30,12 +35,6 @@
   gap: 24px;
 }
 
-.footer__list-item {
-}
-
-.footer__list-ref {
-}
-
 .footer__copyright {
   margin: 0 auto;
   text-align: center;
@@ -51,4 +50,8 @@
   }
 }
 @media (min-width: 1280px) {
+  .footer__content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
