@@ -7,5 +7,4 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
-import 'swiper/swiper.min.css';
-import 'swiper/modules/navigation.min.css';
+
