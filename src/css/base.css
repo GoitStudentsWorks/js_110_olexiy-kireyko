@@ -20,7 +20,7 @@ body {
 }
 
 body {
-  font-family: var(--font-main) ,sans-serif;
+  font-family: var(--font-main), sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -36,17 +36,18 @@ body {
 }
 
 @font-face {
-  font-family: var(--font-second) , sans-serif;
+  font-family: var(--font-second), sans-serif;
   src: url('./fonts/impact.ttf') format('truetype');
   font-style: normal;
 }
 
 .container {
   min-width: 280px;
-  max-width: 320px;
+  max-width: 360px;
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .section {
@@ -125,5 +126,3 @@ h3 {
     padding-bottom: 164px;
   }
 }
-
-
