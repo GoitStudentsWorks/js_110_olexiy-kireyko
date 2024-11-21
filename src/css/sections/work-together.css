@@ -95,6 +95,29 @@
   color: var(--black);
 }
 
+.work-together__input-container {
+  position: relative;
+}
+
+.form__svg-check-right {
+  display: none;
+
+  position: absolute;
+  fill: var(--accet-green);
+  right: 16px;
+  top: 16px;
+}
+
+.form__email-check-wrong {
+  display: none;
+
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.33333;
+  margin-top: 4px;
+  color: var(--error);
+}
+
 .form__button {
   border-radius: 8px;
   padding: 12px 24px;
