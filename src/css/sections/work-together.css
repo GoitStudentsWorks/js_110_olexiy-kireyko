@@ -80,9 +80,7 @@
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--black);
-
-  width: 248px;
-  height: 128px;
+  word-wrap: break-word;
 }
 
 .form__email::placeholder,
@@ -100,6 +98,7 @@
   border: none;
 
   text-transform: uppercase;
+  text-align: center;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.03em;
