@@ -1,3 +1,55 @@
-<section class="work-together">
-  <div class="container"></div>
+<section class="work-together section">
+  <div class="container">
+    <div class="work-together__content">
+      <h2 class="work-together__header">
+        let’s <span class="text__color">work together</span>
+      </h2>
+      <p class="work-together__text">
+        Contact me to transform your ideas into exceptional solutions.
+      </p>
+      <ul class="work-together__list">
+        <li class="work-together__item">
+          <svg class="work-together-list__svg" width="24" height="24">
+            <use href="/img/icons.svg#icon-phone"></use>
+          </svg>
+          <a class="work-together-list__link" href="tel:+380904567890"
+            >+38 090 456 78 90</a
+          >
+        </li>
+        <li class="work-together__item">
+          <svg class="work-together-list__svg" width="24" height="24">
+            <use href="/img/icons.svg#icon-mail"></use>
+          </svg>
+          <a
+            class="work-together-list__link"
+            href="mailto:lloydjefferson@gmail.com"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="work-together__item">
+          <svg class="work-together-list__svg" width="24" height="24">
+            <use href="/img/icons.svg#icon-map"></use>
+          </svg>
+          <p class="work-together-list__link">USA, New York</p>
+        </li>
+      </ul>
+
+      <form class="work-together__form">
+        <input
+          class="form__email"
+          type="email"
+          name="form-email"
+          placeholder="Your email*"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        />
+        <textarea
+          class="form__textarea"
+          name="form-textarea"
+          placeholder="Message"
+        ></textarea>
+
+        <button class="form__button" type="submit">send message</button>
+      </form>
+    </div>
+  </div>
 </section>
