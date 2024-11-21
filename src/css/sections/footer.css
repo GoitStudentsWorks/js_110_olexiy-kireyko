@@ -9,8 +9,13 @@
   flex-direction: column;
 }
 
-.footer__header {
-  font-family: 'Impact', sans-serif;
+.footer__content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__logo {
+  font-family: var(--font-second), sans-serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 1;
@@ -19,7 +24,7 @@
   margin-bottom: 32px;
 }
 
-.footer__header-span {
+.footer__logo-color {
   color: var(--accet-green);
 }
 
@@ -28,12 +33,6 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-
-.footer__list-item {
-}
-
-.footer__list-ref {
 }
 
 .footer__copyright {
@@ -51,4 +50,8 @@
   }
 }
 @media (min-width: 1280px) {
+  .footer__content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
