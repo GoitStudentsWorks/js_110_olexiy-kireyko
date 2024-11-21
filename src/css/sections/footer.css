@@ -14,7 +14,7 @@
   flex-direction: column;
 }
 
-.footer__header {
+.footer__logo {
   font-family: var(--font-second), sans-serif;
   font-weight: 400;
   font-size: 32px;
@@ -24,7 +24,7 @@
   margin-bottom: 32px;
 }
 
-.footer__header-span {
+.footer__logo-color {
   color: var(--accet-green);
 }
 
