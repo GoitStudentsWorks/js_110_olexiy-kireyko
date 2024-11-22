@@ -1,3 +1,233 @@
-.my-projects {
+.my-projects {}
+
+.project-svg {
+    transform: rotate(-45deg);
+    fill: var(--accet-green);
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.my-projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-title {
+    /* font-family: var(--second-family); */
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 123%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--black);
+    min-width: 291px;
+}
+
+.projects-title-span {
+    color: var(--accet-green);
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 12px;
+}
+
+.project-tech-stack {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--black);
+    max-width: 251px;
+}
+
+.project-subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--black);
+    text-overflow: ellipsis;
+}
+
+.visit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-left: auto;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--black);
+    border-radius: 8px;
+    padding: 12px 24px;
+    background: var(--light-grey);
+    text-transform: uppercase;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visit-btn:hover {
+    background: var(--hover-grey);
+}
+
+.load-more {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--black);
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.load-more:hover {
+    color: var(--accet-green);
+}
+
+.load-more.current {
+    position: relative;
+}
+
+.load-more.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accet-green);
+    border-radius: 2px;
+}
+
+.hide-projects {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--black);
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hide-projects:hover {
+    color: var(--accet-green);
+}
+
+.hide-projects.current {
+    position: relative;
+}
+
+.hide-projects::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accet-green);
+    border-radius: 2px;
+}
+
+.project-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .projects-title {
+        font-size: 108px;
+        line-height: 1.15;
+        letter-spacing: 0.01em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .project-tech-stack {
+        max-width: 516px;
+    }
+
+    .project-subtitle {
+        font-family: var(--font-main);
+        /* max-width: 547px; */
+        font-size: 36px;
+        line-height: 1.33;
+        letter-spacing: 0.01em;
+        /* text-overflow: ellipsis;
+        white-space: nowrap; */
+    }
+
+    .load-more {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .project-image {
+        border-radius: 24px;
+    }
+
+    .project-list {
+        gap: 60px;
+    }
+
+    .project-info {
+        padding-top: 16px;
+        gap: 20px;
+    }
+
+    .my-projects-container {
+        gap: 60px;
+    }
+
+    .project-info-item {
+        flex-direction: row;
+    }
+
+
+}
+
+@media (min-width: 1280px) {
+    .my-projects-container {
+        gap: 80px;
+    }
+
+    .project-list {
+        gap: 80px;
+    }
+
+    .project-subtitle {
+        min-width: 763px;
+    }
+
+    .project-image {
+        width: 1008px;
+        height: 580px;
+    }
 
 }
