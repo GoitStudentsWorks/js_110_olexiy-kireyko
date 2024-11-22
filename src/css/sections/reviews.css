@@ -87,9 +87,13 @@
     justify-content: flex-end;
 }
 
-.swiper__button {}
+.swiper__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.swiper-button-prev {
+.swiper__button-prev {
     transform: rotate(180deg);
     width: 40px;
 }
