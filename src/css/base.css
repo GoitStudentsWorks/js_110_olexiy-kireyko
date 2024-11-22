@@ -15,6 +15,8 @@
   --bg: var(--white);
   --text: var(--black);
   --btn-default: var(--black);
+  --bg-form: var(--light-grey);
+  --modal-bg: var(--white);
 }
 
 [data-theme='dark'] {
@@ -32,6 +34,7 @@
   --bg: var(--black);
   --text: var(--white);
   --bg-form: var(--charcoal);
+  --modal-bg: var(--charcoal);
 }
 
 html,

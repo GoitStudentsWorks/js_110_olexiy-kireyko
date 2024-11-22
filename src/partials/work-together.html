@@ -4,7 +4,7 @@
       <h2 class="work-together__header">
         let’s <span class="text__color">work together</span>
       </h2>
-      <img
+      <!-- <img
         class="work-together__decor"
         srcset="
           /images/decor/decor-bg-7-tab-1x.png 1x,
@@ -12,7 +12,7 @@
         "
         src="/images/decor/decor-bg-7-tab-1x.png"
         alt="decor-img"
-      />
+      /> -->
       <p class="work-together__text">
         Contact me to transform your ideas into exceptional solutions.
       </p>
@@ -63,10 +63,29 @@
           name="form-textarea"
           placeholder="Message"
           rows="4"
+          required
         ></textarea>
 
         <button class="form__button" type="submit">send message</button>
       </form>
+
+      <!-- modal-window -->
+      <div class="work-together__modal-window is-ope">
+        <div class="modal-window__container container">
+          <button class="modal-window__close-btn" type="button">
+            <svg class="modal-window__svg" width="12" height="12">
+              <use href="/images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <p class="modal-window__title">
+            Thank you for your interest in cooperation!
+          </p>
+          <p class="modal-window__text p-l">
+            The manager will contact you shortly to discuss further details and
+            opportunities for cooperation. Please stay in touch.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
