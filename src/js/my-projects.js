@@ -130,9 +130,3 @@ function hideProjects() {
   const projectsTitle = document.querySelector(".load__more");
   projectsTitle.focus();
 }
-
-
-
-
-
-
