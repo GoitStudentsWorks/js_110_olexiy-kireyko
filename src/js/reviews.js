@@ -4,6 +4,8 @@ import Swiper from 'swiper';
 const BASE_URL = 'https://portfolio-js.b.goit.study';
 const END_POINT = '/api/reviews';
 const slideList = document.querySelector('.swiper-wrapper');
+const btnPrev = document.querySelector('.swiper__button-prev');
+const btnNext = document.querySelector('.swiper__button-next');
 const swiper = new Swiper('.swiper', {
   speed: 400,
   spaceBetween: 100,
@@ -37,3 +39,7 @@ function markupReviews(arr) {
 getReviews().then(data => {
   slideList.innerHTML = markupReviews(data);
 });
+
+btnNext.addEventListener('click', event => swiper.slideNext());
+
+btnPrev.addEventListener('click', event => swiper.slidePrev());
