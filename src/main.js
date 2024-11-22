@@ -1,5 +1,7 @@
-import './js/faq';
+import './js/theme';
 import './js/header';
+import './js/hero';
+import './js/faq';
 import './js/my-projects';
 import './js/reviews';
 import './js/work-together';
