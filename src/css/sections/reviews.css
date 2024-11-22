@@ -23,12 +23,12 @@
     }
 }
 
-.swiper__wrapper {
+.swiper-wrapper {
     margin-bottom: 24px;
 }
 
 @media (min-width: 1280px) {
-    .swiper__wrapper {
+    .swiper-wrapper {
         margin-bottom: 24px;
         display: flex;
         align-items: center;
@@ -36,7 +36,7 @@
     }
 }
 
-.swiper__slide {
+.swiper-slide {
     border-radius: 16px;
     padding: 32px;
     background: var(--light-grey);
@@ -89,7 +89,7 @@
 
 .swiper__button {}
 
-.swiper__button-prev {
+.swiper-button-prev {
     transform: rotate(180deg);
     width: 40px;
 }
