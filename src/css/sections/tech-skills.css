@@ -1,36 +1,99 @@
- 
-  
-  .marquee {
-    overflow: hidden;
-     
-    font-weight: 500;
-    font-size: 36px;
-    text-transform: uppercase;
-    background-color: #bcdfd1;
+.marquee-container {
+  background: #bcdfd1;
+  overflow: hidden;
+  padding: 20px 0;
+  will-change: transform; /* Оптимизация производительности */
+}
+
+.marquee-container-rev {
+  background: #e4e5e6;
+  overflow: hidden;
+  padding: 20px 0;
+  margin: 10px 0;
+  transform: rotate(1deg);
+  z-index: 2;
+  will-change: transform;
+}
+
+.marquee {
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: flex;
+  transform: translateX(0); /* Начальная позиция */
+  width: max-content; /* Важно для правильного расчета ширины */
+}
+
+.marquee-content-inner {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0;
+  padding: 0; /* Убираем любые отступы */
+}
+
+.marquee-item {
+  color: #292929;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 133%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin: 0 9px;
+  flex-shrink: 0;
+  display: flex; /* Добавлено для выравнивания точек */
+  align-items: center;
+}
+
+.marquee-item-rev {
+  color: #00b068;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 133%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin: 0 9px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-item:after {
+  content: '•';
+  margin-left: 16px;
+  color: #00b068;
+}
+
+.marquee-item-rev:after {
+  content: '•';
+  margin-left: 16px;
+  color: #292929;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
   }
-  
-  .marquee__inner {
-    display: flex;
+  to {
+    transform: translateX(calc(-50%)); /* Используем calc для точного расчета */
   }
-  
-  .marquee__line {
-    flex-shrink: 0;
-    margin: 0;
-    padding: 40px 15px;
-    /* min-width: 1cap; */
-    white-space: nowrap;
-    animation-name: marqueeLine;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+}
+
+/* Верхняя строка */
+.marquee-container .marquee-content {
+  animation: scroll 20s linear infinite;
+  animation-fill-mode: forwards; /* Предотвращает скачок в конце анимации */
+}
+
+/* Нижняя строка */
+.marquee-container-rev .marquee-content {
+  animation: scroll 30s linear infinite;
+  animation-fill-mode: forwards;
+}
+
+/* Добавляем медиа-запрос для оптимизации на мобильных устройствах */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-content {
+    animation-duration: 0s !important;
   }
-  
-  @keyframes marqueeLine {
-    from {
-      transform: translateX(0);
-    }
-    
-    to {
-      transform: translateX(-100%);
-    }
-  }
+}
