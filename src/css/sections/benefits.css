@@ -29,10 +29,6 @@
   transition: transform 800ms ease 50ms;
 }
 
-.benefits__list-item-title {
-  font-family: 'Poppins', sans-serif;
-}
-
 /* ---------------min768px------------- */
 
 @media screen and (min-width: 768px) {
