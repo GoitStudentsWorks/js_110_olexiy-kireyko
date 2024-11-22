@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -17,7 +17,34 @@
     <load src="./partials/header.html" />
 
     <main>
-      <load src="./partials/hero.html" />
+      <section class="section">
+        <div class="swiper hero__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-swiper-autoplay="3000">
+              <load src="./partials/hero-2.html" />
+            </div>
+            <div class="swiper-slide" data-swiper-autoplay="3000">
+              <load src="./partials/hero-2.html" />
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link">Instagram</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">Linkedin</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </section>
       <load src="./partials/about-me.html" />
       <load src="./partials/tech-skills.html" />
       <load src="./partials/my-projects.html" />
