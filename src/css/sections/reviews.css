@@ -30,9 +30,6 @@
 @media (min-width: 1280px) {
     .swiper-wrapper {
         margin-bottom: 24px;
-        display: flex;
-        align-items: center;
-        gap: 32px;
     }
 }
 
