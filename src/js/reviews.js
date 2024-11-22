@@ -3,19 +3,19 @@ import Swiper from 'swiper';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study';
 const END_POINT = '/api/reviews';
-const swiperList = document.querySelector('.swiper-wrapper');
+const swiperList = document.querySelector('.reviews__swiper-list');
 const btnPrev = document.querySelector('.swiper__button-prev');
 const btnNext = document.querySelector('.swiper__button-next');
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews__swiper', {
   speed: 400,
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 1,
+      spaceBetween: 20,
     },
     720: {
       slidesPerView: 1,
-      spaceBetween: 1,
+      spaceBetween: 32,
     },
     1280: {
       slidesPerView: 2,

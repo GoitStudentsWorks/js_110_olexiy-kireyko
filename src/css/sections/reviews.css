@@ -1,5 +1,3 @@
-.reviews {}
-
 .reviews__title {
     line-height: 1.23077;
     letter-spacing: 0.03em;
@@ -65,8 +63,6 @@
     height: 40px;
     overflow: hidden;
 }
-
-.reviews__img {}
 
 
 .reviews__name {
