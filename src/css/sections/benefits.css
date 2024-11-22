@@ -1,15 +1,10 @@
-.benefits {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 .benefits__subtitle {
-  color: #292929;
   max-width: 320px;
   margin: 0 auto 40px;
 }
+
 .benefits__subtitle-span {
-  color: #00b068;
+  color: var(--accet-green);
 }
 .benefits__list {
   display: flex;
@@ -29,49 +24,26 @@
 .benefits__icon {
   padding: 12px;
   border-radius: 8px;
-  background-color: #bcdfd1;
-  fill: #00b068;
+  background-color: var(--light-accet);
+  fill: var(--accet-green);
   transition: transform 800ms ease 50ms;
 }
 
 .benefits__list-item-title {
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.55;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #292929;
-}
-
-.benefits__list-item-text {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: #292929;
-  width: 100%;
 }
 
 /* ---------------min768px------------- */
 
 @media screen and (min-width: 768px) {
-  .benefits {
+  .benefits__container {
     display: grid;
     place-items: center;
   }
 
   .benefits__subtitle {
-    font-size: 108px;
-    line-height: 1.15;
-    letter-spacing: 0.02em;
     margin-bottom: 0;
     max-width: 704px;
-  }
-
-  .benefits__list-item-title {
-    font-size: 20px;
-    line-height: 1.6;
   }
 
   .benefits__list-item {
@@ -109,7 +81,7 @@
 /* ---------------min1280px------------- */
 
 @media screen and (min-width: 1280px) {
-  .benefits {
+  .benefits__container {
     padding-top: 164px;
     background-image: url(../../images/decor/decor-bg-3-desc-1x.png);
     background-color: transparent;
@@ -145,7 +117,7 @@
   @media screen and (-webkit-min-device-pixel-ratio),
     (min-resolution: 2dppx),
     (min-resolution: 196dpi) {
-    .benefits {
+    .benefits__container {
       background-image: url(../../images/decor/decor-bg-3-desc-2x.png);
       background-color: transparent;
       background-repeat: no-repeat;
