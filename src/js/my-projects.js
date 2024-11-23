@@ -1,77 +1,76 @@
 const projects = [
   {
-    title: "power pulse webservice",
-    techStack: "React, JavaScript, Node JS, Git",
+    title: 'power pulse webservice',
+    techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: "/images/my-project/power-pulse-1x.jpg",
-      retina: "/images/my-project/power-pulse-2x.jpg"
+      regular: '/images/my-project/power-pulse-1x.jpg',
+      retina: '/images/my-project/power-pulse-2x.jpg',
     },
-    link: "#"
+    link: '#',
   },
   {
-    title: "vyshyvanka vibes Landing",
-    techStack: "React, JavaScript, Node JS, Git",
+    title: 'vyshyvanka vibes Landing page',
+    techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: "/images/my-project/vyshyvanka-1x.jpg",
-      retina: "/images/my-project/vyshyvanka-2x.jpg"
+      regular: '/images/my-project/vyshyvanka-1x.jpg',
+      retina: '/images/my-project/vyshyvanka-2x.jpg',
     },
-    link: "#"
+    link: '#',
   },
   {
-    title: "energy flow webservice",
-    techStack: "React, JavaScript, Node JS, Git",
+    title: 'energy flow webservice',
+    techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: "/images/my-project/energy-flow-1x.jpg",
-      retina: "/images/my-project/energy-flow-2x.jpg"
+      regular: '/images/my-project/energy-flow-1x.jpg',
+      retina: '/images/my-project/energy-flow-2x.jpg',
     },
-    link: "#"
+    link: '#',
   },
   {
-    title: "mimino website",
-    techStack: "React, JavaScript, Node JS, Git",
+    title: 'mimino website',
+    techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: "/images/my-project/mimino-1x.jpg",
-      retina: "/images/my-project/mimino-2x.jpg"
+      regular: '/images/my-project/mimino-1x.jpg',
+      retina: '/images/my-project/mimino-2x.jpg',
     },
-    link: "#"
+    link: '#',
   },
   {
-    title: "chego jewelry website",
-    techStack: "React, JavaScript, Node JS, Git",
+    title: 'chego jewelry website',
+    techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: "/images/my-project/chego-jewelry-1x.jpg",
-      retina: "/images/my-project/chego-jewelry-2x.jpg"
+      regular: '/images/my-project/chego-jewelry-1x.jpg',
+      retina: '/images/my-project/chego-jewelry-2x.jpg',
     },
-    link: "#"
+    link: '#',
   },
   {
-    title: "fruitbox online store",
-    techStack: "React, JavaScript, Node JS, Git",
+    title: 'fruitbox online store',
+    techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: "/images/my-project/fruitbox-1x.jpg",
-      retina: "/images/my-project/fruitbox-2x.jpg"
+      regular: '/images/my-project/fruitbox-1x.jpg',
+      retina: '/images/my-project/fruitbox-2x.jpg',
     },
-    link: "#"
+    link: '#',
   },
   {
-    title: "starlight studio landing",
-    techStack: "React, JavaScript, Node JS, Git",
+    title: 'starlight studio landing page',
+    techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: "/images/my-project/starlight-1x.jpg",
-      retina: "/images/my-project/starlight-2x.jpg"
+      regular: '/images/my-project/starlight-1x.jpg',
+      retina: '/images/my-project/starlight-2x.jpg',
     },
-    link: "#"
+    link: '#',
   },
-  
 ];
 
-const projectList = document.querySelector(".project__list");
-const loadMoreButton = document.getElementById("load-more");
-const hideProjectsButton = document.getElementById("hide-projects");
+const projectList = document.querySelector('.project__list');
+const loadMoreButton = document.getElementById('load-more');
+const hideProjectsButton = document.getElementById('hide-projects');
 
-loadMoreButton.addEventListener("click", loadMoreProjects);
+loadMoreButton.addEventListener('click', loadMoreProjects);
 
-hideProjectsButton.addEventListener("click", hideProjects);
+hideProjectsButton.addEventListener('click', hideProjects);
 
 let visibleProjects = 0;
 
@@ -82,7 +81,8 @@ function createProjectMarkup(project) {
         src="${project.images.regular}" 
         srcset="${project.images.regular} 1x, ${project.images.retina} 2x" 
         alt="${project.title}" 
-        class="project__image" 
+        class="project__image"
+        title="${project.title}" 
       />
       <div class="project__info">
         <p class="project__tech__stack p-l">${project.techStack}</p>
@@ -102,21 +102,21 @@ function createProjectMarkup(project) {
 function loadMoreProjects() {
   const nextProjects = projects.slice(visibleProjects, visibleProjects + 3);
 
-  nextProjects.forEach((project) => {
+  nextProjects.forEach(project => {
     const projectMarkup = createProjectMarkup(project);
-    projectList.insertAdjacentHTML("beforeend", projectMarkup);
+    projectList.insertAdjacentHTML('beforeend', projectMarkup);
   });
 
   visibleProjects += nextProjects.length;
 
   if (visibleProjects >= projects.length) {
-    loadMoreButton.style.display = "none";
-    hideProjectsButton.style.display = "inline-block";
+    loadMoreButton.style.display = 'none';
+    hideProjectsButton.style.display = 'inline-block';
   }
 }
 
 function hideProjects() {
-  const projectItems = document.querySelectorAll(".project__item");
+  const projectItems = document.querySelectorAll('.project__item');
 
   projectItems.forEach((item, index) => {
     if (index >= 3) item.remove();
@@ -124,9 +124,9 @@ function hideProjects() {
 
   visibleProjects = 0;
 
-  loadMoreButton.style.display = "inline-block";
-  hideProjectsButton.style.display = "none";
-    
-  const projectsTitle = document.querySelector(".load__more");
+  loadMoreButton.style.display = 'inline-block';
+  hideProjectsButton.style.display = 'none';
+
+  const projectsTitle = document.querySelector('.load__more');
   projectsTitle.focus();
 }

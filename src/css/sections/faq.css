@@ -14,7 +14,8 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  transition: border-radius var(--animation), border-bottom var(--animation), gap var(--animation);
+  transition: border-radius var(--animation), border-bottom var(--animation),
+    gap var(--animation);
 }
 
 .faq__acc-item.is-active {
@@ -30,7 +31,6 @@
   line-height: 1.6;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--black);
   border: none;
   background-color: transparent;
   display: flex;
@@ -47,7 +47,7 @@
   width: 12px;
   height: 6px;
   margin: 13px 10px;
-  fill: var(--black);
+  fill: var(--text);
   flex-shrink: 0;
   transition: transform var(--animation);
 }
@@ -65,7 +65,6 @@
 
 .faq__acc-text {
   font-family: var(--font-main);
-  color: var(--black);
 }
 
 .faq__acc-item.js-enabled .faq__ac-panel {
@@ -84,7 +83,7 @@
   background-color: var(--light-accet);
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .faq__title {
     margin-bottom: 60px;
     max-width: 592px;
@@ -101,8 +100,7 @@
   }
 }
 
-@media screen and (min-width:1268px) {
-
+@media screen and (min-width: 1268px) {
   .faq__content {
     display: flex;
     gap: 0;
@@ -129,8 +127,8 @@
   }
 
   @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     .faq__content {
       background-image: url(../../images/decor/decor-bg-4-desc-2x.png);
       background-color: transparent;
