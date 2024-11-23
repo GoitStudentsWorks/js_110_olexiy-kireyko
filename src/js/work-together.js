@@ -62,6 +62,7 @@ async function formRequest(URL, inputValue, textareaValue) {
       email: inputValue,
       comment: textareaValue,
     });
+
     return response.data;
   } catch (error) {
     throw new Error(error.message);

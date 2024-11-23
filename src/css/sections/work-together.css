@@ -136,6 +136,13 @@
 }
 
 @media (min-width: 768px) {
+  .work-together {
+    background-image: url(/images/decor/decor-bg-7-tab-1x.png);
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    margin-top: -120px;
+    padding-top: 120px;
+  }
   /* .work-together__content {
     background-image: url(/images/decor/decor-bg-7-tab-1x.png);
     background-repeat: no-repeat;
