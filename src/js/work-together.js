@@ -6,6 +6,7 @@ const form = document.querySelector('.work-together__form');
 const emailField = form.querySelector('.form__email');
 const emailCheckRight = document.querySelector('.form__svg-check-right');
 const emailCheckWrong = document.querySelector('.form__email-check-wrong');
+const wtContent = document.querySelector('.work-together__modal-part');
 
 emailField.addEventListener('blur', () => {
   if (!emailPattern.test(emailField.value)) {
@@ -41,7 +42,50 @@ function sendForm(event) {
     textareaFieldValue
   )
     .then(data => {
-      console.log(data);
+      const markup = `
+      <div class="work-together__modal-window is-open">
+        <div class="modal-window__container container">
+          <button class="modal-window__close-btn" type="button">
+            <svg class="modal-window__svg" width="12" height="12">
+              <use href="/images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <p class="modal-window__title">
+            ${data.title}
+          </p>
+          <p class="modal-window__text p-l">
+            ${data.message}
+          </p>
+        </div>
+      </div>`;
+
+      wtContent.innerHTML = markup;
+
+      const modalWindow = document.querySelector(
+        '.work-together__modal-window'
+      );
+      const modalWindowCloseBtn = document.querySelector(
+        '.modal-window__close-btn'
+      );
+
+      const closeModal = () => {
+        if (modalWindow.classList.contains('is-open')) {
+          modalWindow.classList.remove('is-open');
+          document.removeEventListener('keydown', handleEscapeKey);
+        }
+      };
+
+      const handleEscapeKey = event => {
+        if (event.key === 'Escape') {
+          closeModal();
+        }
+      };
+
+      modalWindowCloseBtn.addEventListener('click', () => {
+        closeModal();
+      });
+
+      document.addEventListener('keydown', handleEscapeKey);
     })
     .catch(error => {
       console.log(error);
@@ -68,18 +112,3 @@ async function formRequest(URL, inputValue, textareaValue) {
     throw new Error(error.message);
   }
 }
-
-// create markup
-
-// function createMarkup(arr) {
-//   return arr
-//     .map(({ title, message }) => {
-//       `
-//       <div class="work-together__modal-window">
-//       <h2 class="modal-window__header">${title}</h2>
-//       <p class="modal-window__text">${message}</p>
-//       </div>
-//     `;
-//     })
-//     .join('');
-// }
