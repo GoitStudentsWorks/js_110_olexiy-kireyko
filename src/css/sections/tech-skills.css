@@ -6,7 +6,7 @@
 }
 
 .skills__line-bottom {
-  background: var(--light-grey);
+  background: var(--bg-form);
   margin: 10px 0;
   transform: rotate(1deg);
   z-index: 2;
@@ -28,7 +28,7 @@
 }
 
 .skills__item {
-  color: var(--black);
+  color: var(--text);
   font-weight: 500;
   font-size: 36px;
   line-height: 133%;
