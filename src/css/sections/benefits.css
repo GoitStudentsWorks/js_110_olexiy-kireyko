@@ -1,3 +1,130 @@
-.benefits {
+.benefits__subtitle {
+  max-width: 320px;
+  margin: 0 auto 40px;
+}
 
+.benefits__subtitle-span {
+  color: var(--accet-green);
+}
+.benefits__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits__list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 320px;
+}
+
+.benefits__icon {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--light-accet);
+  fill: var(--accet-green);
+  transition: transform 800ms ease 50ms;
+}
+
+/* ---------------min768px------------- */
+
+@media screen and (min-width: 768px) {
+  .benefits__container {
+    display: grid;
+    place-items: center;
+  }
+
+  .benefits__subtitle {
+    margin-bottom: 0;
+    max-width: 704px;
+  }
+
+  .benefits__list-item {
+    max-width: 336px;
+  }
+
+  .benefits__list {
+    max-width: 704px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+  }
+
+  .benefits__list-item:nth-child(1) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .benefits__list-item:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .benefits__list-item:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .benefits__list-item:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 3;
+  }
+}
+
+/* ---------------min1280px------------- */
+
+@media screen and (min-width: 1280px) {
+  .benefits__container {
+    padding-top: 164px;
+    background-image: url(../../images/decor/decor-bg-3-desc-1x.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 95% 5%;
+    backdrop-filter: blur(7px);
+    background-size: 526px 408px;
+  }
+
+  .benefits__subtitle {
+    margin-left: 0;
+  }
+
+  .benefits__list {
+    margin-top: -96px;
+    max-width: 1216px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefits__list-item {
+    max-width: 384px;
+  }
+
+  .benefits__list-item:nth-child(1) {
+    grid-column: 3 / 3;
+  }
+
+  .benefits__list-item:nth-child(4) {
+    grid-column: 3 / 3;
+    grid-row: 2 / 3;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio),
+    (min-resolution: 2dppx),
+    (min-resolution: 196dpi) {
+    .benefits__container {
+      background-image: url(../../images/decor/decor-bg-3-desc-2x.png);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: 95% 5%;
+      backdrop-filter: blur(7px);
+      background-size: 526px 408px;
+    }
+  }
+}
+
+.benefits__list-item:hover .benefits__icon {
+  transform: rotate(360deg) scale(1.1);
+  -webkit-transform: rotate(360deg) scale(1.1);
 }
