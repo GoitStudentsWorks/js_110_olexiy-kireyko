@@ -28,7 +28,7 @@
 .swiper-slide {
     border-radius: 16px;
     padding: 32px;
-    background: var(--light-grey);
+    background: var(--bg-form);
     height: auto;
     display: flex;
     flex-direction: column;

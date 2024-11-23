@@ -24,6 +24,7 @@ const swiper = new Swiper('.reviews__swiper', {
   },
 });
 let currentSlide = swiper.activeIndex;
+let countSlide;
 
 async function getReviews() {
   const { data } = await axios(BASE_URL + END_POINT);
@@ -54,9 +55,10 @@ function btnControl() {}
 getReviews()
   .then(data => {
     swiperList.innerHTML = markupReviews(data);
+    countSlide = data.length;
   })
   .catch(Error => {
-    alert('Reviews not found' + Error);
+    alert('Reviews not found');
     swiperList.innerHTML = `<p>Not found</p>`;
   });
 
