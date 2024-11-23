@@ -2,10 +2,12 @@ import axios from 'axios';
 
 // form verification
 const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
 const form = document.querySelector('.work-together__form');
 const emailField = form.querySelector('.form__email');
 const emailCheckRight = document.querySelector('.form__svg-check-right');
 const emailCheckWrong = document.querySelector('.form__email-check-wrong');
+
 const wtContent = document.querySelector('.work-together__modal-part');
 
 emailField.addEventListener('blur', () => {
@@ -36,11 +38,7 @@ function sendForm(event) {
     return;
   }
 
-  const request = formRequest(
-    `${BASE_URL}/requests`,
-    emailFieldValue,
-    textareaFieldValue
-  )
+  formRequest(`${BASE_URL}/requests`, emailFieldValue, textareaFieldValue)
     .then(data => {
       const markup = `
       <div class="work-together__modal-window is-open">
@@ -60,6 +58,7 @@ function sendForm(event) {
       </div>`;
 
       wtContent.innerHTML = markup;
+      form.reset();
 
       const modalWindow = document.querySelector(
         '.work-together__modal-window'
@@ -93,7 +92,6 @@ function sendForm(event) {
 
   emailCheckRight.style.display = 'none';
   emailCheckWrong.style.display = 'none';
-  form.reset();
 }
 
 // function request
