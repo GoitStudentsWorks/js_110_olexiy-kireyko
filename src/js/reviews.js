@@ -35,7 +35,7 @@ function markupReviews(arr) {
       ({ author, avatar_url, review }) =>
         `<li class="swiper-slide">
             <blockquote class="reviews__quote">
-              <p class="reviews__text">${review}</p>
+              <p class=".p-l">${review}</p>
             </blockquote>
           <div class="reviews__info">
             <div class="reviews__wrapper__img">
