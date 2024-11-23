@@ -14,14 +14,17 @@ const swiper = new Swiper('.reviews__swiper', {
     320: {
       slidesPerView: 1,
       spaceBetween: 300,
+      centeredSlides: true,
     },
     768: {
       slidesPerView: 1,
       spaceBetween: 300,
+      centeredSlides: true,
     },
     1280: {
       slidesPerView: 2,
       spaceBetween: 32,
+      centerInsufficientSlides: true,
     },
   },
   on: {
@@ -56,14 +59,14 @@ function markupReviews(arr) {
 }
 
 function btnControl() {
-  if (swiper.isBeginning) {
+  if (swiper.isLocked) {
+    btnPrev.dataset.action = false;
+    btnNext.dataset.action = false;
+  } else if (swiper.isBeginning) {
     btnPrev.dataset.action = false;
     btnNext.dataset.action = true;
   } else if (swiper.isEnd) {
     btnPrev.dataset.action = true;
-    btnNext.dataset.action = false;
-  } else if (swiper.isLocked) {
-    btnPrev.dataset.action = false;
     btnNext.dataset.action = false;
   } else {
     btnPrev.dataset.action = true;
@@ -73,8 +76,9 @@ function btnControl() {
 
 getReviews()
   .then(data => {
-    btnControl();
     swiperList.innerHTML = markupReviews(data);
+    swiper.update();
+    btnControl();
   })
   .catch(Error => {
     alert('Reviews not found');
