@@ -26,11 +26,6 @@
 }
 
 .hero__text {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   margin-bottom: 32px;
   max-width: 320px;
 }
@@ -66,8 +61,6 @@
 
   .hero__text {
     max-width: 336px;
-    font-size: 20px;
-    line-height: 1.6;
     margin-right: 32px;
   }
 
