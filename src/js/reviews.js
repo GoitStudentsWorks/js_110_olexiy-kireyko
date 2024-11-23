@@ -50,12 +50,29 @@ function markupReviews(arr) {
     .join('');
 }
 
-function btnControl() {}
+function btnControl() {
+  if (countSlide > 1) {
+    if (currentSlide === 0) {
+      btnPrev.dataset.action = false;
+      btnNext.dataset.action = true;
+    } else if (0 < currentSlide && currentSlide < countSlide - 1) {
+      btnPrev.dataset.action = true;
+      btnNext.dataset.action = true;
+    } else if (currentSlide === countSlide - 1) {
+      btnNext.dataset.action = false;
+      btnPrev.dataset.action = true;
+    }
+  } else if (countSlide === 1) {
+    btnPrev.dataset.action = false;
+    btnNext.dataset.action = false;
+  }
+}
 
 getReviews()
   .then(data => {
-    swiperList.innerHTML = markupReviews(data);
     countSlide = data.length;
+    btnControl();
+    swiperList.innerHTML = markupReviews(data);
   })
   .catch(Error => {
     alert('Reviews not found');
@@ -65,9 +82,11 @@ getReviews()
 btnNext.addEventListener('click', event => {
   swiper.slideNext();
   currentSlide = swiper.activeIndex;
+  btnControl();
 });
 
 btnPrev.addEventListener('click', event => {
   swiper.slidePrev();
   currentSlide = swiper.activeIndex;
+  btnControl();
 });
