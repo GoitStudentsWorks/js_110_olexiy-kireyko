@@ -35,6 +35,10 @@
     border-radius: 16px;
     padding: 32px;
     background: var(--light-grey);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .reviews__quote {
