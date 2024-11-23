@@ -49,6 +49,8 @@ function markupReviews(arr) {
     .join('');
 }
 
+function btnControl() {}
+
 getReviews()
   .then(data => {
     swiperList.innerHTML = markupReviews(data);

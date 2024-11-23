@@ -1,16 +1,10 @@
 .reviews__title {
-    line-height: 1.23077;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--black);
     text-align: center;
     margin-bottom: 40px;
 }
 
 @media (min-width: 768px) {
     .reviews__title {
-        line-height: 1.14815;
-        letter-spacing: 0.02em;
         margin-bottom: 60px;
     }
 }
