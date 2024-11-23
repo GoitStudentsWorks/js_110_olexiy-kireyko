@@ -81,12 +81,13 @@ getReviews()
 
 btnNext.addEventListener('click', event => {
   swiper.slideNext();
-  currentSlide = swiper.activeIndex;
-  btnControl();
 });
 
 btnPrev.addEventListener('click', event => {
   swiper.slidePrev();
+});
+
+swiper.on('slideChange', () => {
   currentSlide = swiper.activeIndex;
   btnControl();
 });
