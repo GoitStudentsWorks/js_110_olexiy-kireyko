@@ -53,7 +53,7 @@ getReviews()
     swiperList.innerHTML = markupReviews(data);
   })
   .catch(Error => {
-    alert('Reviews error' + Error);
+    alert('Reviews not found' + Error);
     swiperList.innerHTML = `<p>Not found</p>`;
   });
 
