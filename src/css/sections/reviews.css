@@ -85,6 +85,7 @@
     border-radius: 8px;
     padding: 7px;
     transition: var(--animation);
+    cursor: pointer;
 }
 
 .swiper__button:hover,

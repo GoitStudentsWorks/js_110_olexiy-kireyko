@@ -23,6 +23,7 @@ const swiper = new Swiper('.reviews__swiper', {
     },
   },
 });
+let currentSlide = swiper.activeIndex;
 
 async function getReviews() {
   const { data } = await axios(BASE_URL + END_POINT);
@@ -57,6 +58,12 @@ getReviews()
     swiperList.innerHTML = `<p>Not found</p>`;
   });
 
-btnNext.addEventListener('click', event => swiper.slideNext());
+btnNext.addEventListener('click', event => {
+  swiper.slideNext();
+  currentSlide = swiper.activeIndex;
+});
 
-btnPrev.addEventListener('click', event => swiper.slidePrev());
+btnPrev.addEventListener('click', event => {
+  swiper.slidePrev();
+  currentSlide = swiper.activeIndex;
+});
