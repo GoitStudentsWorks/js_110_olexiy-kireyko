@@ -3,9 +3,11 @@ import Swiper from 'swiper';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study';
 const END_POINT = '/api/reviews';
+
 const swiperList = document.querySelector('.reviews__swiper-list');
 const btnPrev = document.querySelector('.swiper__button-prev');
 const btnNext = document.querySelector('.swiper__button-next');
+
 const swiper = new Swiper('.reviews__swiper', {
   speed: 400,
   breakpoints: {
@@ -22,9 +24,12 @@ const swiper = new Swiper('.reviews__swiper', {
       spaceBetween: 32,
     },
   },
+  on: {
+    slideChange: () => {
+      btnControl();
+    },
+  },
 });
-let currentSlide = swiper.activeIndex;
-let countSlide;
 
 async function getReviews() {
   const { data } = await axios(BASE_URL + END_POINT);
@@ -51,26 +56,23 @@ function markupReviews(arr) {
 }
 
 function btnControl() {
-  if (countSlide > 1) {
-    if (currentSlide === 0) {
-      btnPrev.dataset.action = false;
-      btnNext.dataset.action = true;
-    } else if (0 < currentSlide && currentSlide < countSlide - 1) {
-      btnPrev.dataset.action = true;
-      btnNext.dataset.action = true;
-    } else if (currentSlide === countSlide - 1) {
-      btnNext.dataset.action = false;
-      btnPrev.dataset.action = true;
-    }
-  } else if (countSlide === 1) {
+  if (swiper.isBeginning) {
+    btnPrev.dataset.action = false;
+    btnNext.dataset.action = true;
+  } else if (swiper.isEnd) {
+    btnPrev.dataset.action = true;
+    btnNext.dataset.action = false;
+  } else if (swiper.isLocked) {
     btnPrev.dataset.action = false;
     btnNext.dataset.action = false;
+  } else {
+    btnPrev.dataset.action = true;
+    btnNext.dataset.action = true;
   }
 }
 
 getReviews()
   .then(data => {
-    countSlide = data.length;
     btnControl();
     swiperList.innerHTML = markupReviews(data);
   })
@@ -85,9 +87,4 @@ btnNext.addEventListener('click', event => {
 
 btnPrev.addEventListener('click', event => {
   swiper.slidePrev();
-});
-
-swiper.on('slideChange', () => {
-  currentSlide = swiper.activeIndex;
-  btnControl();
 });
