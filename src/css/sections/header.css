@@ -85,7 +85,7 @@
 .header__toggle-icon {
   height: 2px;
   width: 22px;
-  background-color: var(--black);
+  background-color: var(--text);
   transition: transform 0.4s ease-in-out;
 }
 
@@ -139,7 +139,7 @@
   text-indent: -9999px;
   width: 48px;
   height: 24px;
-  background-color: var(--light-grey);
+  background-color: var(--bg-form);
   border-radius: 16px;
 }
 
@@ -162,7 +162,7 @@
   top: 2px;
   width: 20px;
   height: 20px;
-  background-color: var(--light-grey);
+  background-color: var(--bg-form);
   border-radius: 50%;
   transition: 0.3s ease-out;
   z-index: -1;

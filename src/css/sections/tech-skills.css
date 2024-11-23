@@ -1,5 +1,5 @@
 .skills__line {
-  background: var(--light-accet);
+  background: var(--bg-faq);
   overflow: hidden;
   padding: 20px 0;
   will-change: transform;
@@ -53,7 +53,7 @@
 .skills__item-theme-green:after {
   content: '•';
   margin-left: 16px;
-  color: var(--black);
+  color: var(--text);
 }
 
 @keyframes scroll {
