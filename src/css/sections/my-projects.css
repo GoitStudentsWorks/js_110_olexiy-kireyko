@@ -181,7 +181,9 @@
     gap: 80px;
   }
 
-  .project__subtitle {
+  .project__subtitle,
+  .project__subtitle__first,
+  .project__subtitle__second {
     min-width: 763px;
   }
 
