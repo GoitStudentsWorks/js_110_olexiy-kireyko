@@ -111,14 +111,6 @@
   gap: 16px;
 }
 
-.project__subtitle,
-.project__subtitle__first,
-.project__subtitle__second {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .project__subtitle__second {
   display: none;
 }
@@ -146,6 +138,8 @@
     letter-spacing: 0.01em;
     white-space: nowrap;
     max-width: 547px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .load__more,
