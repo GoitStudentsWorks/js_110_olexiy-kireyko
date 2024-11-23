@@ -67,7 +67,7 @@
 .form__email {
   border-radius: 8px;
   padding: 12px 16px;
-  background-color: var(--bg-form);
+  background-color: var(--light-grey);
   border: none;
 
   line-height: 1.5;
@@ -76,7 +76,7 @@
 .form__textarea {
   border-radius: 8px;
   padding: 16px;
-  background-color: var(--bg-form);
+  background-color: var(--light-grey);
   border: none;
   resize: none;
 
@@ -139,17 +139,11 @@
   .work-together {
     background-image: url(/images/decor/decor-bg-7-tab-1x.png);
     background-repeat: no-repeat;
+    background-size: 336px 260px;
     background-position-x: 100%;
     margin-top: -120px;
     padding-top: 120px;
   }
-  /* .work-together__content {
-    background-image: url(/images/decor/decor-bg-7-tab-1x.png);
-    background-repeat: no-repeat;
-    background-size: 336px 260px;
-    margin-right: 0;
-    margin-top: -120px;
-  } */
 
   .work-together__header {
     margin-bottom: 60px;
@@ -172,6 +166,12 @@
 }
 
 @media (min-width: 1280px) {
+  .work-together {
+    background-image: url(/images/decor/decor-bg-7-tab-1x.png);
+    background-size: 526px 408px;
+    margin-top: -116px;
+    padding-top: 116px;
+  }
   .work-together__content {
     position: relative;
   }
@@ -194,6 +194,12 @@
     right: 0;
     bottom: 0;
     width: 592px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .work-together {
+    background-image: url(/images/decor/decor-bg-7-tab-2x.png);
   }
 }
 
