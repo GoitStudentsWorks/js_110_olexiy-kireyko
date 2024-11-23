@@ -74,17 +74,16 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-50%));
+    transform: translateX(-50%);
   }
 }
 
 .skills__line-top .skills__content {
-  animation: scroll 40s ease-in-out infinite;
-  animation-fill-mode: forwards;
+  animation: scroll 10s ease-in-out infinite;
 }
 
 .skills__line-bottom .skills__content {
-  animation: scroll 80s linear infinite;
+  animation: scroll 40s linear infinite;
   animation-fill-mode: forwards;
 }
 
