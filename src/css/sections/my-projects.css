@@ -76,7 +76,7 @@
 }
 
 .load__more.current::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -95,7 +95,7 @@
 }
 
 .hide__projects::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -111,13 +111,19 @@
   gap: 16px;
 }
 
+.project__subtitle,
+.project__subtitle__first,
+.project__subtitle__second {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .project__subtitle__second {
   display: none;
 }
 
 @media (min-width: 768px) {
-
   .projects__title {
     white-space: nowrap;
   }
@@ -168,7 +174,6 @@
   .project__info__item {
     flex-direction: row;
   }
-
 }
 
 @media (min-width: 1280px) {
