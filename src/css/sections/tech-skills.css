@@ -20,12 +20,7 @@
 }
 
 .skills__line-bottom {
-<<<<<<< HEAD
   background: var(--light-grey);
-=======
-  background: var(--bg-form);
-  margin: 10px 0;
->>>>>>> d11858ad802f353e8e6c634b0d6c167388276fd7
   transform: rotate(1deg);
   z-index: 1;
 }
@@ -46,7 +41,7 @@
 }
 
 .skills__item {
-  color: var(--text);
+  color: var(--black);
   font-weight: 500;
   font-size: 36px;
   line-height: 133%;
