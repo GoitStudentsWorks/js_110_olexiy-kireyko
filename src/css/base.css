@@ -15,6 +15,9 @@
   --bg: var(--white);
   --text: var(--black);
   --btn-default: var(--black);
+  --bg-form: var(--light-grey);
+  --bg-faq: var(--light-accet);
+  --border-faq: var(--light-grey);
 }
 
 [data-theme='dark'] {
@@ -22,16 +25,16 @@
   --accet-green: #14c57c;
   --white: #f0f0f0;
   --charcoal: #2a2d32;
-  --light-accet: #204136;
+  --dark-accet: #204136;
   --hover-green: #009156;
   --error: #e74a3b;
   --hover-grey: #3b3f45;
-  --font-main: 'Poppins';
-  --font-second: 'Impact';
 
   --bg: var(--black);
   --text: var(--white);
   --bg-form: var(--charcoal);
+  --bg-faq: var(--dark-accet);
+  --border-faq: var(--white);
 }
 
 html,

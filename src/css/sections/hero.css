@@ -1,4 +1,124 @@
 .hero {
+  padding-bottom: 0;
+  background-image: url(../../images/decor/decor-bg-8-mob-1x.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 30% -8%;
+  background-size: 320px 704px;
 }
 
+.hero__title {
+  margin: 0;
+}
 
+.hero__text-color {
+  color: var(--accet-green);
+}
+
+.hero__img-wrapper {
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.hero__img {
+  border-radius: 24px;
+  max-width: 340px;
+}
+
+.hero__text {
+  margin-bottom: 32px;
+  max-width: 320px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio),
+  (min-resolution: 2dppx),
+  (min-resolution: 196dpi) {
+  .hero {
+    background-image: url(../../images/decor/decor-bg-8-mob-2x.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 30% -8%;
+    background-size: 320px 704px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 60px;
+
+    background-image: url(../../images/decor/decor-bg-5-tab-1x.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% -8%;
+    background-size: 704px 896px;
+  }
+
+  .hero__title {
+    font-size: 124px;
+    line-height: 1.16;
+    margin-bottom: 40px;
+  }
+
+  .hero__text {
+    max-width: 336px;
+    margin-right: 32px;
+  }
+
+  .hero__tab-wrapper {
+    position: relative;
+    height: 336px;
+  }
+
+  .hero__img {
+    position: absolute;
+    max-width: 336px;
+    height: 336px;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio),
+    (min-resolution: 2dppx),
+    (min-resolution: 196dpi) {
+    .hero {
+      background-image: url(../../images/decor/decor-bg-5-tab-2x.png);
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: 50% -8%;
+      background-size: 704px 896px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    padding-top: 38px;
+  }
+
+  .hero_container {
+    position: relative;
+  }
+
+  .hero__tab-wrapper {
+    position: static;
+  }
+
+  .hero__title {
+    max-width: 603px;
+    font-size: 136px;
+    line-height: 1.15;
+    margin-bottom: 40px;
+  }
+
+  .hero__text {
+    max-width: 592px;
+  }
+
+  .hero__img {
+    position: absolute;
+    top: 0;
+    right: 32px;
+    max-width: 488px;
+    height: auto;
+  }
+}

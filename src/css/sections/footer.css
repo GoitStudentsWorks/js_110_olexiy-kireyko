@@ -1,7 +1,7 @@
 .footer {
   padding-top: 40px;
   padding-bottom: 24px;
-  border-top: 1px solid var(--light-grey);
+  border-top: 1px solid var(--bg-form);
 }
 
 .footer__content {
@@ -43,16 +43,19 @@
   margin: 0 auto;
   text-align: center;
 }
+
 @media (min-width: 768px) {
   .footer__list {
     flex-direction: row;
     gap: 40px;
   }
+
   .footer__copyright {
     margin: 0;
     text-align: right;
   }
 }
+
 @media (min-width: 1280px) {
   .footer__content-wrapper {
     flex-direction: row;
