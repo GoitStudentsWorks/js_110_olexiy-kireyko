@@ -189,24 +189,3 @@ h3 {
 .no-scroll {
   overflow: hidden;
 }
-
-/* Переопределяем стили для autofill */
-input:-webkit-autofill,
-input:-internal-autofill-selected {
-  background-color: red !important; /* Цвет фона */
-  color: #000 !important; /* Цвет текста */
-  border: 2px solid #4caf50 !important; /* Граница */
-  transition: background-color 0.5s ease; /* Плавное изменение фона */
-}
-
-/* Для совместимости с другими браузерами */
-input:-moz-autofill {
-  background-color: red !important;
-  color: #000 !important;
-  border: 2px solid #4caf50 !important;
-}
-
-/* При переходе из состояния autofill обратно */
-input:-webkit-autofill:focus {
-  background-color: red !important;
-}
