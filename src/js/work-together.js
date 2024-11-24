@@ -65,6 +65,8 @@ function sendForm(event) {
   const emailFieldValue = formData.get('form-email');
   const textareaFieldValue = formData.get('form-textarea');
 
+  const svgCloseImg = new URL('/images/icons.svg', import.meta.url);
+
   if (!emailPattern.test(emailField.value)) {
     return;
   }
@@ -76,7 +78,7 @@ function sendForm(event) {
         <div class="modal-window__container container">
           <button class="modal-window__close-btn" type="button">
             <svg class="modal-window__svg" width="12" height="12">
-              <use href="/images/icons.svg#icon-close"></use>
+              <use href="${svgCloseImg}#icon-close"></use>
             </svg>
           </button>
           <h2 class="modal-window__title">
