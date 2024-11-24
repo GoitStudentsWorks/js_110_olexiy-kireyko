@@ -128,7 +128,7 @@ function sendForm(event) {
         icon: '',
         titleColor: 'var(--text)',
         message: `${error.message}, try again later`,
-        backgroundColor: 'var(--accet-green)',
+        backgroundColor: 'var(--error)',
         messageColor: 'var(--text)',
         closeOnEscape: true,
         position: 'topCenter',
