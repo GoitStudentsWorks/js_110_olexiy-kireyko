@@ -15,18 +15,13 @@ const swiper = new Swiper('.reviews__swiper', {
     prevEl: '.swiper__btn-prev',
   },
   speed: 400,
+  spaceBetween: 32,
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 300,
-    },
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 300,
     },
     1280: {
       slidesPerView: 2,
-      spaceBetween: 32,
       centerInsufficientSlides: true,
     },
   },
