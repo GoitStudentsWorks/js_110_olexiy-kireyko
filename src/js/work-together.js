@@ -1,4 +1,6 @@
 import axios from 'axios';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 // form verification
 const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
@@ -48,9 +50,9 @@ function sendForm(event) {
               <use href="/images/icons.svg#icon-close"></use>
             </svg>
           </button>
-          <p class="modal-window__title">
+          <h2 class="modal-window__title">
             ${data.title}
-          </p>
+          </h2>
           <p class="modal-window__text p-l">
             ${data.message}
           </p>
@@ -59,7 +61,6 @@ function sendForm(event) {
 
       wtContent.innerHTML = markup;
       form.reset();
-
       const modalWindow = document.querySelector(
         '.work-together__modal-window'
       );
@@ -80,6 +81,12 @@ function sendForm(event) {
         }
       };
 
+      modalWindow.addEventListener('click', event => {
+        if (event.target === modalWindow) {
+          closeModal();
+        }
+      });
+
       modalWindowCloseBtn.addEventListener('click', () => {
         closeModal();
       });
@@ -87,7 +94,17 @@ function sendForm(event) {
       document.addEventListener('keydown', handleEscapeKey);
     })
     .catch(error => {
-      console.log(error);
+      iziToast.error({
+        icon: '',
+        titleColor: 'var(--text)',
+        message: `${error.message}, try again later`,
+        backgroundColor: 'var(--accet-green)',
+        messageColor: 'var(--text)',
+        closeOnEscape: true,
+        position: 'topCenter',
+        transitionIn: 'flipInX',
+        transitionOut: 'flipOutX',
+      });
     });
 
   emailCheckRight.style.display = 'none';

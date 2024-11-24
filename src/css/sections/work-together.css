@@ -39,7 +39,8 @@
   transition: color var(--animation);
 }
 
-.work-together-list__link:hover {
+.work-together-list__link:hover,
+.work-together-list__link:focus {
   color: var(--accet-green);
 }
 
@@ -57,16 +58,23 @@
   width: 100%;
 }
 
-input:-webkit-autofill {
-  background-color: transparent !important;
-  color: inherit !important;
-}
-
 .form__email {
   border-radius: 8px;
   padding: 12px 16px;
   background-color: var(--bg-form);
   border: none;
+}
+
+input:-webkit-autofill {
+  background-color: var(--bg-form) !important;
+  color: var(--text) !important;
+  border: none !important;
+}
+
+input:autofill {
+  background-color: var(--bg-form) !important;
+  color: var(--text) !important;
+  border: none !important;
 }
 
 .form__textarea {
@@ -117,7 +125,8 @@ input:-webkit-autofill {
   transition: background-color var(--animation);
 }
 
-.form__button:hover {
+.form__button:hover,
+.form__button:focus {
   background-color: var(--hover-green);
 }
 
@@ -239,7 +248,8 @@ input:-webkit-autofill {
   transition: all var(--animation);
 }
 
-.modal-window__close-btn:hover .modal-window__svg {
+.modal-window__close-btn:hover .modal-window__svg,
+.modal-window__close-btn:focus .modal-window__svg {
   fill: var(--accet-green);
   scale: 1.2;
 }
