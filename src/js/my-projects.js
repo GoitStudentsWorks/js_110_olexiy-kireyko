@@ -3,8 +3,8 @@ const projects = [
     title: 'power pulse webservice',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: './images/my-project/power-pulse-1x.jpg',
-      retina: './images/my-project/power-pulse-2x.jpg',
+      regular: new URL('/images/my-project/power-pulse-1x.jpg', import.meta.url).href,
+      retina: new URL('/images/my-project/power-pulse-2x.jpg', import.meta.url).href,
     },
     link: '#',
   },
@@ -12,8 +12,8 @@ const projects = [
     title: 'vyshyvanka vibes Landing page',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: './images/my-project/vyshyvanka-1x.jpg',
-      retina: './images/my-project/vyshyvanka-2x.jpg',
+      regular: new URL('/images/my-project/vyshyvanka-1x.jpg', import.meta.url).href,
+      retina: new URL('/images/my-project/vyshyvanka-2x.jpg', import.meta.url).href,
     },
     link: '#',
   },
@@ -21,8 +21,8 @@ const projects = [
     title: 'energy flow webservice',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: './images/my-project/energy-flow-1x.jpg',
-      retina: './images/my-project/energy-flow-2x.jpg',
+      regular: new URL('/images/my-project/energy-flow-1x.jpg', import.meta.url).href,
+      retina: new URL('/images/my-project/energy-flow-2x.jpg', import.meta.url).href,
     },
     link: '#',
   },
@@ -30,8 +30,8 @@ const projects = [
     title: 'mimino website',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: './images/my-project/mimino-1x.jpg',
-      retina: './images/my-project/mimino-2x.jpg',
+      regular: new URL('/images/my-project/mimino-1x.jpg', import.meta.url).href,
+      retina: new URL('/images/my-project/mimino-2x.jpg', import.meta.url).href,
     },
     link: '#',
   },
@@ -39,8 +39,8 @@ const projects = [
     title: 'chego jewelry website',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: './images/my-project/chego-jewelry-1x.jpg',
-      retina: './images/my-project/chego-jewelry-2x.jpg',
+      regular: new URL('/images/my-project/chego-jewelry-1x.jpg', import.meta.url).href,
+      retina: new URL('/images/my-project/chego-jewelry-2x.jpg', import.meta.url).href,
     },
     link: '#',
   },
@@ -48,8 +48,8 @@ const projects = [
     title: 'fruitbox online store',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: './images/my-project/fruitbox-1x.jpg',
-      retina: './images/my-project/fruitbox-2x.jpg',
+      regular: new URL('/images/my-project/fruitbox-1x.jpg', import.meta.url).href,
+      retina: new URL('/images/my-project/fruitbox-2x.jpg', import.meta.url).href,
     },
     link: '#',
   },
@@ -57,8 +57,8 @@ const projects = [
     title: 'starlight studio landing page',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: './images/my-project/starlight-1x.jpg',
-      retina: './images/my-project/starlight-2x.jpg',
+      regular: new URL('/images/my-project/starlight-1x.jpg', import.meta.url).href,
+      retina: new URL('/images/my-project/starlight-2x.jpg', import.meta.url).href,
     },
     link: '#',
   },
@@ -75,11 +75,13 @@ hideProjectsButton.addEventListener('click', hideProjects);
 let visibleProjects = 0;
 
 function createProjectMarkup(project) {
+  const spritePath = new URL('/images/icons.svg', import.meta.url).href;
+
   return `
     <li class="project__item">
       <img 
         src="${project.images.regular}" 
-        srcset="${project.images.regular} 1x, ${project.images.retina} 2x" 
+        srcset="${project.images.regular} 1x, ${project.images.retina} 2x"
         alt="${project.title}" 
         class="project__image"
         title="${project.title}" 
@@ -90,7 +92,7 @@ function createProjectMarkup(project) {
           <h3 class="project__subtitle">${project.title}</h3>
           <a href="${project.link}" class="visit__btn p-l" target="_blank">VISIT
               <svg class="project__svg" width="15" height="15">
-                  <use href="./images/icons.svg#icon-arr-right"></use>
+                  <use href="${spritePath}#icon-arr-right"></use>
               </svg>
           </a>
         </div>
