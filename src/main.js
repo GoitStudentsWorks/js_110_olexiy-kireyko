@@ -11,3 +11,5 @@ import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import axios from 'axios';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
