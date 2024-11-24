@@ -13,15 +13,15 @@
 .skills__line {
   background: var(--bg-faq);
   overflow: hidden;
-  padding: 20px 0;
+  padding: 32px 0;
   will-change: transform;
   position: relative;
   z-index: 2;
 }
 
 .skills__line-bottom {
-  background: var(--light-grey);
-  transform: rotate(1deg);
+  background: var(--bg-form);
+  transform: rotate(2deg);
   z-index: 1;
 }
 
@@ -43,29 +43,27 @@
 .skills__item {
   color: var(--text);
   font-weight: 500;
-  font-size: 36px;
-  line-height: 133%;
-  letter-spacing: 0.01em;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  margin: 0 9px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
 }
 
-.skills__item-theme-green {
+.skills__line-bottom .skills__item {
   color: var(--accet-green);
 }
 
 .skills__item:after {
   content: '•';
-  margin-left: 16px;
+  margin: 0 16px;
   color: var(--accet-green);
 }
 
-.skills__item-theme-green:after {
+.skills__line-bottom .skills__item:after {
   content: '•';
-  margin-left: 16px;
   color: var(--text);
 }
 
@@ -79,16 +77,28 @@
 }
 
 .skills__line-top .skills__content {
-  animation: scroll 10s ease-in-out infinite;
+  animation: scroll 30s ease-in-out infinite;
 }
 
 .skills__line-bottom .skills__content {
-  animation: scroll 40s linear infinite;
+  animation: scroll 50s linear infinite;
   animation-fill-mode: forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .skills__content {
     animation-duration: 0s !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .skills__item {
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 0.01em;
+  }
+
+  .skills__line {
+    padding: 40px 0;
   }
 }
