@@ -65,18 +65,6 @@
   border: none;
 }
 
-input:-webkit-autofill {
-  background-color: var(--bg-form) !important;
-  color: var(--text) !important;
-  border: none !important;
-}
-
-input:autofill {
-  background-color: var(--bg-form) !important;
-  color: var(--text) !important;
-  border: none !important;
-}
-
 .form__textarea {
   border-radius: 8px;
   padding: 16px;

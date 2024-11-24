@@ -90,10 +90,6 @@ function sendForm(event) {
 
       wtContent.innerHTML = markup;
 
-      localStorage.removeItem('form-data-storage');
-      formData['form-email'] = '';
-      formData['form-textarea'] = '';
-
       form.reset();
       const modalWindow = document.querySelector(
         '.work-together__modal-window'
@@ -140,6 +136,10 @@ function sendForm(event) {
         transitionOut: 'flipOutX',
       });
     });
+
+  localStorage.removeItem('form-data-storage');
+  formData['form-email'] = '';
+  formData['form-textarea'] = '';
 
   emailCheckRight.style.display = 'none';
   emailCheckWrong.style.display = 'none';
