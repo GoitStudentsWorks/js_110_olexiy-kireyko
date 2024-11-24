@@ -45,7 +45,6 @@
   font-weight: 500;
   font-size: 32px;
   line-height: 1.25;
-  letter-spacing: 0.02em;
   text-transform: uppercase;
   flex-shrink: 0;
   display: flex;
@@ -63,7 +62,7 @@
 }
 
 .skills__line-bottom .skills__item:after {
-  content: '•'; 
+  content: '•';
   color: var(--text);
 }
 
@@ -95,7 +94,6 @@
   .skills__item {
     font-size: 36px;
     line-height: 1.33;
-    letter-spacing: 0.01em;
   }
 
   .skills__line {
