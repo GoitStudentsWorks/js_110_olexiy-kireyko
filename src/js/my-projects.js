@@ -90,6 +90,8 @@ hideProjectsButton.addEventListener('click', hideProjects);
 let visibleProjects = 0;
 
 function createProjectMarkup(project) {
+  const spritePath = new URL('/images/icons.svg', import.meta.url).href;
+
   return `
     <li class="project__item">
       <img 
@@ -105,7 +107,7 @@ function createProjectMarkup(project) {
           <h3 class="project__subtitle">${project.title}</h3>
           <a href="${project.link}" class="visit__btn p-l" target="_blank">VISIT
               <svg class="project__svg" width="15" height="15">
-                  <use href="/images/icons.svg#icon-arr-right"></use>
+                  <use href="${spritePath}#icon-arr-right"></use>
               </svg>
           </a>
         </div>
