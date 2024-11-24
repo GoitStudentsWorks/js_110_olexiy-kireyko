@@ -137,11 +137,11 @@
 
   .about-me__box-foto {
     top: 34%;
-    left: 22%;
+    left: 21.8%;
   }
 
   .about-me__bio-text {
-    max-width: 488px;
+    max-width: 494px;
   }
 
   .about-me__margin-bottom-text {
@@ -156,6 +156,6 @@
   .about-me__education-role {
     margin-top: -30px;
     justify-content: center;
-    gap: 150px;
+    gap: 136px;
   }
 }
