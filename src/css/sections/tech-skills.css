@@ -20,7 +20,7 @@
 }
 
 .skills__line-bottom {
-  background: var(--light-grey);
+  background: var(--bg-form);
   transform: rotate(2deg);
   z-index: 1;
 }
@@ -91,4 +91,19 @@
   .skills__content {
     animation-duration: 0s !important;
   }
+}
+
+@media (min-width: 768px) {
+  .skills__item {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+  }
+
+  .skills__line {
+    padding: 40px 0;
+  }
+}
+
+@media (min-width: 1280px) {
 }

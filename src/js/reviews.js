@@ -1,12 +1,19 @@
 import axios from 'axios';
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+import iziToast from 'izitoast';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study';
 const END_POINT = '/api/reviews';
+
 const swiperList = document.querySelector('.reviews__swiper-list');
-const btnPrev = document.querySelector('.swiper__button-prev');
-const btnNext = document.querySelector('.swiper__button-next');
+
 const swiper = new Swiper('.reviews__swiper', {
+  modules: [Navigation],
+  navigation: {
+    nextEl: '.swiper__btn-next',
+    prevEl: '.swiper__btn-prev',
+  },
   speed: 400,
   breakpoints: {
     320: {
@@ -20,11 +27,10 @@ const swiper = new Swiper('.reviews__swiper', {
     1280: {
       slidesPerView: 2,
       spaceBetween: 32,
+      centerInsufficientSlides: true,
     },
   },
 });
-let currentSlide = swiper.activeIndex;
-let countSlide;
 
 async function getReviews() {
   const { data } = await axios(BASE_URL + END_POINT);
@@ -37,7 +43,7 @@ function markupReviews(arr) {
       ({ author, avatar_url, review }) =>
         `<li class="swiper-slide">
             <blockquote class="reviews__quote">
-              <p class=".p-l">${review}</p>
+              <p class="p-l">${review}</p>
             </blockquote>
           <div class="reviews__info">
             <div class="reviews__wrapper__img">
@@ -50,44 +56,16 @@ function markupReviews(arr) {
     .join('');
 }
 
-function btnControl() {
-  if (countSlide > 1) {
-    if (currentSlide === 0) {
-      btnPrev.dataset.action = false;
-      btnNext.dataset.action = true;
-    } else if (0 < currentSlide && currentSlide < countSlide - 1) {
-      btnPrev.dataset.action = true;
-      btnNext.dataset.action = true;
-    } else if (currentSlide === countSlide - 1) {
-      btnNext.dataset.action = false;
-      btnPrev.dataset.action = true;
-    }
-  } else if (countSlide === 1) {
-    btnPrev.dataset.action = false;
-    btnNext.dataset.action = false;
-  }
-}
-
 getReviews()
   .then(data => {
-    countSlide = data.length;
-    btnControl();
     swiperList.innerHTML = markupReviews(data);
+    swiper.update();
   })
   .catch(Error => {
-    alert('Reviews not found');
-    swiperList.innerHTML = `<p>Not found</p>`;
+    iziToast.show({
+      message: 'Reviews not found',
+    });
+    swiperList.innerHTML = `<li>
+                              <p class="p-l">Not found</p>
+                            </li>`;
   });
-
-btnNext.addEventListener('click', event => {
-  swiper.slideNext();
-});
-
-btnPrev.addEventListener('click', event => {
-  swiper.slidePrev();
-});
-
-swiper.on('slideChange', () => {
-  currentSlide = swiper.activeIndex;
-  btnControl();
-});

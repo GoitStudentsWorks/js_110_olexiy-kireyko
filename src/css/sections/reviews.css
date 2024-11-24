@@ -19,11 +19,7 @@
   margin-bottom: 24px;
 }
 
-/*@media (min-width: 1280px) {*/
-/*  .swiper-wrapper {*/
-/*    margin-bottom: 24px;*/
-/*  }*/
-/*}*/
+/* slides */
 
 .reviews .swiper-slide {
   border-radius: 16px;
@@ -60,38 +56,55 @@
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--text);
+  text-transform: none;
 }
 
-.swiper__wrapper_button {
+/* button */
+
+.swiper__btn-list {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 16px;
 }
 
-.swiper__button {
+@media (min-width: 1280px) {
+  .swiper__btn-list {
+    gap: 24px;
+  }
+}
+
+.swiper__btn {
+  border: 1px solid var(--text);
+  fill: var(--text);
+
+  padding: 7px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--black);
-  border-radius: 8px;
-  padding: 7px;
-  transition: var(--animation);
+
   cursor: pointer;
+  transition: var(--animation);
 }
 
-.swiper__button[data-action='false'] {
-  fill: var(--light-grey);
-  border-color: var(--light-grey);
-  cursor: auto;
+@media (min-width: 1280px) {
+  .swiper__btn {
+    padding: 11px;
+  }
 }
 
-.swiper__button:hover:not([data-action='false']),
-.swiper__button:focus:not([data-action='false']) {
-  background-color: var(--light-grey);
+.swiper__btn:hover:not(.swiper-button-disabled),
+.swiper__btn:focus:not(.swiper-button-disabled) {
+  background-color: var(--bg-form);
 }
 
-.swiper__button-prev {
+.swiper__btn-prev {
   transform: rotate(180deg);
-  width: 40px;
+}
+
+.swiper-button-disabled {
+  cursor: auto;
+  border-color: var(--bg-form);
+  fill: var(--bg-form);
 }
