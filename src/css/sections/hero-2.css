@@ -49,7 +49,7 @@ main {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text);
-  background-color: var(--light-accet);
+  background-color: var(--bg-faq);
   border-radius: 16px;
   width: fit-content;
   max-width: 165px;

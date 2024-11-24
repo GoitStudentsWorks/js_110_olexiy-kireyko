@@ -24,7 +24,7 @@
 .benefits__icon {
   padding: 12px;
   border-radius: 8px;
-  background-color: var(--light-accet);
+  background-color: var(--bg-faq);
   fill: var(--accet-green);
   transition: transform 800ms ease 50ms;
 }

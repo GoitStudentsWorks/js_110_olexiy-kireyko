@@ -11,7 +11,7 @@
 }
 
 .skills__line {
-  background: var(--light-accet);
+  background: var(--bg-faq);
   overflow: hidden;
   padding: 20px 0;
   will-change: transform;

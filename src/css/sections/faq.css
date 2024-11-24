@@ -8,13 +8,15 @@
 
 .faq__acc-item {
   border-radius: 0;
-  border-bottom: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--bg-form);
   padding: 28px 24px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 0;
-  transition: border-radius var(--animation), border-bottom var(--animation),
+  transition:
+    border-radius var(--animation),
+    border-bottom var(--animation),
     gap var(--animation);
 }
 
@@ -24,6 +26,10 @@
   gap: 24px;
 }
 
+.faq__acc-item:has(+ .is-active) {
+  border-bottom: none;
+}
+
 .faq__acc-trigger {
   font-family: var(--font-main);
   font-weight: 400;
@@ -31,6 +37,7 @@
   line-height: 1.6;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: var(--text);
   border: none;
   background-color: transparent;
   display: flex;
@@ -65,6 +72,7 @@
 
 .faq__acc-text {
   font-family: var(--font-main);
+  color: var(--text);
 }
 
 .faq__acc-item.js-enabled .faq__ac-panel {
@@ -80,7 +88,7 @@
 }
 
 .faq__acc-item.is-active {
-  background-color: var(--light-accet);
+  background-color: var(--bg-faq);
 }
 
 @media screen and (min-width: 768px) {
@@ -121,20 +129,18 @@
     background-image: url(../../images/decor/decor-bg-4-desc-1x.png);
     background-color: transparent;
     background-repeat: no-repeat;
-    background-position: left bottom;
-    backdrop-filter: blur(7.40168571472168px);
+    background-position: left 612px;
     background-size: 526px 408px;
   }
 
   @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
     .faq__content {
       background-image: url(../../images/decor/decor-bg-4-desc-2x.png);
       background-color: transparent;
       background-repeat: no-repeat;
-      background-position: left bottom;
-      backdrop-filter: blur(7.40168571472168px);
+      background-position: left 612px;
       background-size: 526px 408px;
     }
   }

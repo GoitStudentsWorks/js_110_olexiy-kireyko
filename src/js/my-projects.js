@@ -1,10 +1,25 @@
+import powerPulse1x from '/images/my-project/power-pulse-1x.jpg';
+import powerPulse2x from '/images/my-project/power-pulse-2x.jpg';
+import vyshyvanka1x from '/images/my-project/vyshyvanka-1x.jpg';
+import vyshyvanka2x from '/images/my-project/vyshyvanka-2x.jpg';
+import energy1x from '/images/my-project/energy-flow-1x.jpg';
+import energy2x from '/images/my-project/energy-flow-2x.jpg';
+import mimino1x from '/images/my-project/mimino-1x.jpg';
+import mimino2x from '/images/my-project/mimino-2x.jpg';
+import chegoJewelry1x from '/images/my-project/chego-jewelry-1x.jpg';
+import chegoJewelry2x from '/images/my-project/chego-jewelry-2x.jpg';
+import fruitbox1x from '/images/my-project/fruitbox-1x.jpg';
+import fruitbox2x from '/images/my-project/fruitbox-2x.jpg';
+import starligh1x from '/images/my-project/starlight-1x.jpg';
+import starligh2x from '/images/my-project/starlight-2x.jpg';
+
 const projects = [
   {
     title: 'power pulse webservice',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: '/images/my-project/power-pulse-1x.jpg',
-      retina: '/images/my-project/power-pulse-2x.jpg',
+      regular: powerPulse1x,
+      retina: powerPulse2x,
     },
     link: '#',
   },
@@ -12,8 +27,8 @@ const projects = [
     title: 'vyshyvanka vibes Landing page',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: '/images/my-project/vyshyvanka-1x.jpg',
-      retina: '/images/my-project/vyshyvanka-2x.jpg',
+      regular: vyshyvanka1x,
+      retina:  vyshyvanka2x,
     },
     link: '#',
   },
@@ -21,8 +36,8 @@ const projects = [
     title: 'energy flow webservice',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: '/images/my-project/energy-flow-1x.jpg',
-      retina: '/images/my-project/energy-flow-2x.jpg',
+      regular: energy1x,
+      retina: energy2x,
     },
     link: '#',
   },
@@ -30,8 +45,8 @@ const projects = [
     title: 'mimino website',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: '/images/my-project/mimino-1x.jpg',
-      retina: '/images/my-project/mimino-2x.jpg',
+      regular: mimino1x,
+      retina: mimino2x,
     },
     link: '#',
   },
@@ -39,8 +54,8 @@ const projects = [
     title: 'chego jewelry website',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: '/images/my-project/chego-jewelry-1x.jpg',
-      retina: '/images/my-project/chego-jewelry-2x.jpg',
+      regular: chegoJewelry1x,
+      retina: chegoJewelry2x,
     },
     link: '#',
   },
@@ -48,8 +63,8 @@ const projects = [
     title: 'fruitbox online store',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: '/images/my-project/fruitbox-1x.jpg',
-      retina: '/images/my-project/fruitbox-2x.jpg',
+      regular: fruitbox1x,
+      retina: fruitbox2x,
     },
     link: '#',
   },
@@ -57,8 +72,8 @@ const projects = [
     title: 'starlight studio landing page',
     techStack: 'React, JavaScript, Node JS, Git',
     images: {
-      regular: '/images/my-project/starlight-1x.jpg',
-      retina: '/images/my-project/starlight-2x.jpg',
+      regular: starligh1x,
+      retina: starligh2x,
     },
     link: '#',
   },
