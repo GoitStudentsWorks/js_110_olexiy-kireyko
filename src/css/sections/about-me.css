@@ -1,3 +1,174 @@
-.about-me {
+.about-me__title {
+  margin-bottom: 40px;
+}
 
+.about-me__title-span {
+  color: var(--accet-green);
+}
+
+.about-me__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-me__my-foto {
+  border-radius: 16px;
+}
+
+.about-me__bio-title {
+  margin-bottom: 32px;
+}
+
+.about-me__bio-text {
+  margin-bottom: 24px;
+}
+
+.about-me__education-title {
+  margin-bottom: 32px;
+}
+
+.about-me__list {
+  position: relative;
+}
+
+.about-me__item {
+  margin-bottom: 12px;
+  padding-left: 32px;
+}
+
+.about-me__padding-left {
+  padding-left: 24px;
+}
+
+.about-me__role-title {
+  margin-bottom: 32px;
+}
+
+.about-me__item::before {
+  content: '';
+  position: absolute;
+  border-radius: 1px;
+  width: 4px;
+  height: 4px;
+  background: var(--accet-green);
+  left: 4%;
+  top: 5%;
+}
+
+.about-me__item.square::before {
+  left: 6%;
+}
+
+.about-me__item:nth-child(2)::before {
+  top: 36%;
+}
+
+.about-me__item:nth-child(3)::before {
+  top: 80%;
+}
+
+.about-me__item.square:nth-child(1)::before {
+  top: 10%;
+}
+
+.about-me__item.square:nth-child(2)::before {
+  top: 48%;
+}
+.about-me__item.square:nth-child(3)::before {
+  top: 85%;
+}
+
+.about-me__margin-zero {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .about-me__container {
+    background-image: url(/images/decor/decor-bg-6-tab-1x.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 98% 84%;
+    background-size: 336px 252px;
+  }
+
+  .about-me__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 32px;
+  }
+
+  .about-me__box-foto {
+    padding-top: 368px;
+  }
+
+  .about-me__my-foto {
+    margin: 0;
+  }
+
+  .about-me__bio-text {
+    max-width: 336px;
+  }
+
+  .about-me__box-decor {
+    display: block;
+    padding-left: 355px;
+  }
+
+  .about-me__item {
+    margin-bottom: 16px;
+    max-width: 336px;
+  }
+
+  .about-me__margin-zero {
+    margin: 0;
+  }
+
+  .about-me__item:nth-child(2)::before {
+    top: 37%;
+  }
+
+  .about-me__item:nth-child(3)::before {
+    top: 81%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-me__container {
+    background-image: url(/images/decor/decor-bg-2-desc-1x.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 100% 73%;
+    background-size: 384px 288px;
+  }
+
+  .about-me__box {
+    justify-content: end;
+    gap: 80px 136px;
+  }
+
+  .about-me__box-foto {
+    padding-top: 272px;
+  }
+
+  .about-me__bio-text {
+    max-width: 488px;
+  }
+
+  .about-me__box-decor {
+    justify-content: end;
+    display: grid;
+  }
+
+  .about-me__item {
+    max-width: 384px;
+  }
+
+  .about-me__education-title-container {
+    margin-left: 208px;
+  }
+
+  .about-me__role-container {
+    margin-right: auto;
+  }
 }
