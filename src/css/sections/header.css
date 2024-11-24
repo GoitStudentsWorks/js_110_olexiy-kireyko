@@ -44,13 +44,14 @@
   right: 0;
   left: 0;
   bottom: 0;
+  height: 100vh;
   transform: translateX(105%);
   transition: transform 0.4s ease-in-out;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  background-color: var(--white);
+  background-color: var(--bg);
   z-index: 998;
 }
 
@@ -199,9 +200,11 @@
     background-color: transparent;
     gap: 40px;
     justify-content: flex-end;
+    height: auto;
   }
 
-  .nav__list {
+  .nav__list,
+  .nav.is-open .nav__list {
     display: flex;
     flex-direction: row;
     gap: 40px;
