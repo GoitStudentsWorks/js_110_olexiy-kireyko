@@ -64,12 +64,18 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 24px;
+  gap: 16px;
+}
+
+@media (min-width: 1280px) {
+  .swiper__btn-list {
+    gap: 24px;
+  }
 }
 
 .swiper__btn {
-  border: 1px solid var(--black);
-  fill: var(--black);
+  border: 1px solid var(--text);
+  fill: var(--text);
 
   padding: 7px;
   border-radius: 8px;
