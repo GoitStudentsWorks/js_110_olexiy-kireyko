@@ -1,7 +1,7 @@
 .footer {
   padding-top: 40px;
   padding-bottom: 24px;
-  border-top: 1px solid var(--light-grey);
+  border-top: 1px solid var(--bg-form);
 }
 
 .footer__content {
