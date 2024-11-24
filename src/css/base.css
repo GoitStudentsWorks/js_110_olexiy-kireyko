@@ -17,6 +17,7 @@
   --btn-default: var(--black);
   --bg-form: var(--light-grey);
   --bg-faq: var(--light-accet);
+  --border-faq: var(--light-grey);
 }
 
 [data-theme='dark'] {
@@ -33,6 +34,7 @@
   --text: var(--white);
   --bg-form: var(--charcoal);
   --bg-faq: var(--dark-accet);
+  --border-faq: var(--white);
 }
 
 html,
