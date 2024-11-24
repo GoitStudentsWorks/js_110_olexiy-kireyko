@@ -71,7 +71,7 @@
   border: 1px solid var(--black);
   fill: var(--black);
 
-  padding: 11px;
+  padding: 7px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -79,6 +79,12 @@
 
   cursor: pointer;
   transition: var(--animation);
+}
+
+@media (min-width: 1280px) {
+  .swiper__btn {
+    padding: 11px;
+  }
 }
 
 .swiper__btn:hover:not(.swiper-button-disabled),
