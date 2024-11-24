@@ -6,9 +6,14 @@
   color: var(--accet-green);
 }
 
+.about-me__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
 .about-me__my-foto {
   border-radius: 16px;
-  margin-bottom: 40px;
 }
 
 .about-me__bio-title {
@@ -17,7 +22,6 @@
 
 .about-me__bio-text {
   margin-bottom: 24px;
-  max-width: 320px;
 }
 
 .about-me__box-decor {
@@ -28,10 +32,13 @@
   margin-bottom: 32px;
 }
 
+.about-me__list {
+  position: relative;
+}
+
 .about-me__item {
   margin-bottom: 12px;
   padding-left: 32px;
-  max-width: 320px;
 }
 
 .about-me__padding-left {
@@ -42,36 +49,42 @@
   margin-bottom: 32px;
 }
 
-.about-me__margin-bottom-text,
-.about-me__margin-bottom-item {
-  margin-bottom: 40px;
-}
-
-.about-me__margin-zero {
-  margin: 0;
-}
-
-.about-me__box-item {
-  position: relative;
-}
-
-.about-me__decor-square {
+.about-me__item::before {
+  content: '';
+  position: absolute;
   border-radius: 1px;
   width: 4px;
   height: 4px;
   background: var(--accet-green);
-  position: absolute;
-  top: 13%;
-  left: 14px;
+  left: 4%;
+  top: 5%;
 }
 
-.about-me__decor-square-blender {
-  top: 20%;
+.about-me__item.square::before {
+  left: 6%;
 }
 
-.about-me__decor-square-role {
-  top: 40%;
-  left: 10px;
+.about-me__item:nth-child(2)::before {
+  top: 36%;
+}
+
+.about-me__item:nth-child(3)::before {
+  top: 80%;
+}
+
+.about-me__item.square:nth-child(1)::before {
+  top: 10%;
+}
+
+.about-me__item.square:nth-child(2)::before {
+  top: 48%;
+}
+.about-me__item.square:nth-child(3)::before {
+  top: 85%;
+}
+
+.about-me__margin-zero {
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -83,9 +96,10 @@
     background-size: 336px 252px;
   }
 
-  .about-me__foto-bio {
+  .about-me__box {
     display: flex;
-    gap: 32px;
+    flex-wrap: wrap;
+    gap: 60px 32px;
   }
 
   .about-me__box-foto {
@@ -100,18 +114,9 @@
     max-width: 336px;
   }
 
-  .about-me__margin-bottom-text {
-    margin-bottom: 140px;
-  }
-
   .about-me__box-decor {
     display: block;
     padding-left: 355px;
-  }
-
-  .about-me__education-role {
-    display: flex;
-    gap: 32px;
   }
 
   .about-me__item {
@@ -119,12 +124,16 @@
     max-width: 336px;
   }
 
-  .about-me__decor-square-tabl {
-    top: 10px;
+  .about-me__margin-zero {
+    margin: 0;
   }
 
-  .about-me__margin-bottom-item {
-    margin: 0;
+  .about-me__item:nth-child(2)::before {
+    top: 37%;
+  }
+
+  .about-me__item:nth-child(3)::before {
+    top: 81%;
   }
 }
 
@@ -137,6 +146,11 @@
     background-size: 384px 288px;
   }
 
+  .about-me__box {
+    justify-content: end;
+    gap: 80px 136px;
+  }
+
   .about-me__box-foto {
     padding-top: 272px;
   }
@@ -145,27 +159,20 @@
     max-width: 488px;
   }
 
-  .about-me__margin-bottom-text {
-    margin-bottom: 312px;
-  }
-
   .about-me__box-decor {
     justify-content: end;
     display: grid;
-  }
-
-  .about-me__education-role {
-    justify-content: center;
-    gap: 136px;
-    margin-left: -50px;
   }
 
   .about-me__item {
     max-width: 384px;
   }
 
-  .about-me__foto-bio {
-    justify-content: end;
-    gap: 136px;
+  .about-me__education-title-container {
+    margin-left: 208px;
+  }
+
+  .about-me__role-container {
+    margin-right: auto;
   }
 }
