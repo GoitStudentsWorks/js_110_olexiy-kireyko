@@ -41,7 +41,6 @@
 }
 
 .skills__item {
-  color: var(--text);
   font-weight: 500;
   font-size: 32px;
   line-height: 1.25;
@@ -63,8 +62,7 @@
 }
 
 .skills__line-bottom .skills__item:after {
-  content: '•'; 
-  color: var(--text);
+  content: '•';
 }
 
 @keyframes scroll {
