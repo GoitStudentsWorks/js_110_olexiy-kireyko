@@ -24,10 +24,6 @@
   margin-bottom: 24px;
 }
 
-.about-me__box-decor {
-  display: none;
-}
-
 .about-me__education-title {
   margin-bottom: 32px;
 }
@@ -89,7 +85,7 @@
 
 @media (min-width: 768px) {
   .about-me__container {
-    background-image: url(../images/decor/decor-bg-6-tab-1x.png);
+    background-image: url(/images/decor/decor-bg-6-tab-1x.png);
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: 98% 84%;
@@ -139,7 +135,7 @@
 
 @media (min-width: 1280px) {
   .about-me__container {
-    background-image: url(../images/decor/decor-bg-2-desc-1x.png);
+    background-image: url(/images/decor/decor-bg-2-desc-1x.png);
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: 100% 73%;
