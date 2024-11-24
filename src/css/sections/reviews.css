@@ -95,7 +95,7 @@
 
 .swiper__btn:hover:not(.swiper-button-disabled),
 .swiper__btn:focus:not(.swiper-button-disabled) {
-  background-color: var(--light-grey);
+  background-color: var(--bg-form);
 }
 
 .swiper__btn-prev {
@@ -104,6 +104,6 @@
 
 .swiper-button-disabled {
   cursor: auto;
-  border-color: var(--light-grey);
-  fill: var(--light-grey);
+  border-color: var(--bg-form);
+  fill: var(--bg-form);
 }
