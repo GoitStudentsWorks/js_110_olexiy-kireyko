@@ -13,7 +13,7 @@
 .skills__line {
   background: var(--bg-faq);
   overflow: hidden;
-  padding: 20px 0;
+  padding: 32px 0;
   will-change: transform;
   position: relative;
   z-index: 2;
@@ -21,7 +21,7 @@
 
 .skills__line-bottom {
   background: var(--light-grey);
-  transform: rotate(1deg);
+  transform: rotate(2deg);
   z-index: 1;
 }
 
@@ -43,9 +43,9 @@
 .skills__item {
   color: var(--text);
   font-weight: 500;
-  font-size: 36px;
-  line-height: 133%;
-  letter-spacing: 0.01em;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   margin: 0 9px;
   flex-shrink: 0;
@@ -79,11 +79,11 @@
 }
 
 .skills__line-top .skills__content {
-  animation: scroll 10s ease-in-out infinite;
+  animation: scroll 30s ease-in-out infinite;
 }
 
 .skills__line-bottom .skills__content {
-  animation: scroll 40s linear infinite;
+  animation: scroll 50s linear infinite;
   animation-fill-mode: forwards;
 }
 
