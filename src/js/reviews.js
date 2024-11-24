@@ -59,11 +59,19 @@ getReviews()
     swiperList.innerHTML = markupReviews(data);
     swiper.update();
   })
-  .catch(Error => {
-    iziToast.show({
+  .catch(error => {
+    iziToast.error({
+      icon: '',
+      titleColor: 'var(--text)',
       message: 'Reviews not found',
+      backgroundColor: 'var(--error)',
+      messageColor: 'var(--text)',
+      closeOnEscape: true,
+      position: 'topCenter',
+      transitionIn: 'flipInX',
+      transitionOut: 'flipOutX',
     });
-    swiperList.innerHTML = `<li>
-                              <p class="p-l">Not found</p>
-                            </li>`;
+    document
+      .querySelector('.reviews__swiper')
+      .innerHTML = `<p class="p-l" style="text-align: center">Not found</p>`;
   });
