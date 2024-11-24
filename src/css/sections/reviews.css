@@ -21,7 +21,7 @@
 
 /* slides */
 
-.swiper-slide {
+.reviews .swiper-slide {
   border-radius: 16px;
   padding: 32px;
   background: var(--bg-form);
