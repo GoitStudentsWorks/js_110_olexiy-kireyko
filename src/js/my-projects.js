@@ -6,7 +6,7 @@ const projects = [
       regular: new URL('/images/my-project/power-pulse-1x.jpg', import.meta.url).href,
       retina: new URL('/images/my-project/power-pulse-2x.jpg', import.meta.url).href,
     },
-    link: '#',
+    link: 'https://github.com/olexiy-kireyko/project-DevStudents-JS',
   },
   {
     title: 'vyshyvanka vibes Landing page',
@@ -15,7 +15,7 @@ const projects = [
       regular: new URL('/images/my-project/vyshyvanka-1x.jpg', import.meta.url).href,
       retina: new URL('/images/my-project/vyshyvanka-2x.jpg', import.meta.url).href,
     },
-    link: '#',
+    link: 'https://github.com/olexiy-kireyko/project-DevStudents-JS',
   },
   {
     title: 'energy flow webservice',
@@ -24,7 +24,7 @@ const projects = [
       regular: new URL('/images/my-project/energy-flow-1x.jpg', import.meta.url).href,
       retina: new URL('/images/my-project/energy-flow-2x.jpg', import.meta.url).href,
     },
-    link: '#',
+    link: 'https://github.com/olexiy-kireyko/project-DevStudents-JS',
   },
   {
     title: 'mimino website',
@@ -33,7 +33,7 @@ const projects = [
       regular: new URL('/images/my-project/mimino-1x.jpg', import.meta.url).href,
       retina: new URL('/images/my-project/mimino-2x.jpg', import.meta.url).href,
     },
-    link: '#',
+    link: 'https://github.com/olexiy-kireyko/project-DevStudents-JS',
   },
   {
     title: 'chego jewelry website',
@@ -42,7 +42,7 @@ const projects = [
       regular: new URL('/images/my-project/chego-jewelry-1x.jpg', import.meta.url).href,
       retina: new URL('/images/my-project/chego-jewelry-2x.jpg', import.meta.url).href,
     },
-    link: '#',
+    link: 'https://github.com/olexiy-kireyko/project-DevStudents-JS',
   },
   {
     title: 'fruitbox online store',
@@ -51,7 +51,7 @@ const projects = [
       regular: new URL('/images/my-project/fruitbox-1x.jpg', import.meta.url).href,
       retina: new URL('/images/my-project/fruitbox-2x.jpg', import.meta.url).href,
     },
-    link: '#',
+    link: 'https://github.com/olexiy-kireyko/project-DevStudents-JS',
   },
   {
     title: 'starlight studio landing page',
@@ -60,7 +60,7 @@ const projects = [
       regular: new URL('/images/my-project/starlight-1x.jpg', import.meta.url).href,
       retina: new URL('/images/my-project/starlight-2x.jpg', import.meta.url).href,
     },
-    link: '#',
+    link: 'https://github.com/olexiy-kireyko/project-DevStudents-JS',
   },
 ];
 
