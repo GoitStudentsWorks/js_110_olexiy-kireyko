@@ -36,6 +36,7 @@
 .work-together-list__link:focus {
   color: var(--accet-green);
 }
+
 .work-together-list__map:hover,
 .work-together-list__map:focus {
   color: inherit;
@@ -90,23 +91,8 @@
   color: var(--error);
 }
 
-.form__button {
-  border-radius: 8px;
-  padding: 12px 24px;
-  background-color: var(--accet-green);
-  border: none;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: var(--white);
-  transition: background-color var(--animation);
-}
-
-.form__button:hover,
-.form__button:focus {
-  background-color: var(--hover-green);
+.form__btn {
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -119,7 +105,8 @@
     background-repeat: no-repeat;
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
     .work-together__content {
       background-image: url(/images/decor/decor-bg-7-tab-2x.png);
     }
@@ -140,9 +127,6 @@
     margin-bottom: 60px;
   }
 
-  .form__button {
-    max-width: 173px;
-  }
 }
 
 @media (min-width: 1280px) {
