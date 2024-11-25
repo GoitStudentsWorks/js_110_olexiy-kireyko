@@ -3,10 +3,6 @@
   margin: 0 auto 40px;
 }
 
-.benefits__subtitle-span {
-  color: var(--accet-green);
-}
-
 .benefits__list {
   display: flex;
   flex-direction: column;

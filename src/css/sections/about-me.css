@@ -1,9 +1,7 @@
 .about-me__title {
   margin-bottom: 40px;
 }
-.about-me__title-span {
-  color: var(--accet-green);
-}
+
 .about-me__box {
   display: flex;
   flex-direction: column;
@@ -29,7 +27,7 @@
   position: relative;
   padding-left: 32px;
 }
-.second {
+.about-me__item-second {
   padding-left: 24px;
 }
 .about-me__item::before {
@@ -42,7 +40,7 @@
   left: 10px;
   top: 10px;
 }
-.about-me__item.second::before {
+.about-me__item.about-me__item-second::before {
   left: 6px;
 }
 @media (min-width: 768px) {
@@ -76,7 +74,6 @@
   .about-me__box {
     overflow: visible;
     margin-left: 208px;
-    display: grid;
     grid-template-columns: 384px 384px;
     gap: 80px 136px;
   }
