@@ -4,47 +4,24 @@
       <h2 class="about-me__title">
         About <span class="about-me__title-span">me</span>
       </h2>
-
       <div class="about-me__box">
         <div class="about-me__box-foto">
-          <picture>
-            <source
-              media="(min-width: 1280px)"
-              srcset="
-                /images/about-me/about-me-desctop-1x.jpg 1x,
-                /images/about-me/about-me-desctop-2x.jpg 2x
-              "
-              width="384"
-            />
-            <source
-              media="(min-width:768px)"
-              srcset="
-                /images/about-me/about-me-tab-1x.jpg 1x,
-                /images/about-me/about-me-tab-2x.jpg 2x
-              "
-              width="336"
-            />
-            <source
-              media="(max-width:767px)"
-              srcset="
-                /images/about-me/about-me-mob-1x.jpg 1x,
-                /images/about-me/about-me-mob-2x.jpg 2x
-              "
-            />
-            <img
-              src="/images/about-me/about-me-tab-1x.jpg"
-              alt="My foto"
-              width="340"
-              class="about-me__my-foto"
-            />
-          </picture>
+          <img
+            srcset="
+              ./images/about-me/about-me-desctop-1x.jpg 1x,
+              ./images/about-me/about-me-desctop-2x.jpg 2x
+            "
+            src="../images/about-me/about-me-desctop-2x.jpg"
+            alt="fullstack photo"
+            alt="My foto"
+            width="340"
+            class="about-me__my-foto"
+          />
         </div>
-
         <div class="about-me__bio">
-          <h3 class="about-me__bio-title">BIO</h3>
-
+          <h3 class="about-me__subtitle">bio</h3>
           <ul class="about-me__bio-list">
-            <li class="about-me__bio-text">
+            <li class="about-me__bio-text p-l">
               I'm Lloyd Jefferson, a talented programmer specializing in
               software development. My expertise spans various programming
               languages and technologies, and I am dedicated to continually
@@ -53,8 +30,7 @@
               analytical skills to effectively tackle even the most challenging
               tasks.
             </li>
-
-            <li class="about-me__bio-text about-me__margin-zero">
+            <li class="about-me__bio-text p-l">
               Adaptable to both independent and team-oriented work, I
               collaborate seamlessly with colleagues, exchanging ideas and
               finding optimal solutions. My professional maturity enables me to
@@ -66,38 +42,28 @@
             </li>
           </ul>
         </div>
-
         <div class="about-me__education-title-container">
-          <h3 class="about-me__education-title">EDUCATION</h3>
-
+          <h3 class="about-me__subtitle">education</h3>
           <ul class="about-me__list">
-            <li class="about-me__item">
+            <li class="about-me__item p-l">
               2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
               York
             </li>
-
-            <li class="about-me__item">
+            <li class="about-me__item p-l">
               2019 - 2020 / Advanced Web Development Certificate, GoIT IT
               School, New York
             </li>
-
-            <li class="about-me__item about-me__margin-zero">
+            <li class="about-me__item p-l">
               2020 - 2022 / Advanced Blender Animation Techniques, Udemy
             </li>
           </ul>
         </div>
-
         <div class="about-me__role-container">
-          <h3 class="about-me__role-title">ROLE</h3>
-
+          <h3 class="about-me__subtitle">role</h3>
           <ul class="about-me__list">
-            <li class="about-me__item square">Frontend development</li>
-
-            <li class="about-me__item square">HeadlessCMS, Wordpress</li>
-
-            <li class="about-me__item square about-me__margin-zero">
-              Blender (enjoy)
-            </li>
+            <li class="about-me__item second p-l">Frontend development</li>
+            <li class="about-me__item second p-l">HeadlessCMS, Wordpress</li>
+            <li class="about-me__item second p-l">Blender (enjoy)</li>
           </ul>
         </div>
       </div>
