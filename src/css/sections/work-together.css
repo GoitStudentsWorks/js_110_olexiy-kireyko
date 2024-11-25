@@ -36,6 +36,10 @@
 .work-together-list__link:focus {
   color: var(--accet-green);
 }
+.work-together-list__map:hover,
+.work-together-list__map:focus {
+  color: inherit;
+}
 
 .work-together__form {
   display: flex;
