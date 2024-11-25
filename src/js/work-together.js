@@ -2,7 +2,6 @@ import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-// form verification
 const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
 const form = document.querySelector('.work-together__form');
@@ -25,8 +24,6 @@ emailField.addEventListener('blur', () => {
     emailCheckWrong.style.display = 'none';
   }
 });
-
-// Save Data to LocalStorage
 
 let formData = {
   'form-email': '',
@@ -53,8 +50,6 @@ form.addEventListener('input', event => {
     localStorage.setItem('form-data-storage', JSON.stringify(formData));
   }
 });
-
-// form
 
 form.addEventListener('submit', sendForm);
 
