@@ -100,26 +100,6 @@
   color: var(--error);
 }
 
-.form__button {
-  border-radius: 8px;
-  padding: 12px 24px;
-  background-color: var(--accet-green);
-  border: none;
-
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: var(--white);
-
-  transition: background-color var(--animation);
-}
-
-.form__button:hover {
-  background-color: var(--hover-green);
-}
-
 @media (min-width: 768px) {
   .work-together {
     background-image: url(/images/decor/decor-bg-7-tab-1x.png);
@@ -215,7 +195,9 @@
 
   background-color: var(--bg);
 
-  transition: opacity var(--animation), visibility var(--animation);
+  transition:
+    opacity var(--animation),
+    visibility var(--animation);
 }
 
 .work-together__modal-window.is-open {

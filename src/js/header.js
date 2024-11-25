@@ -1,12 +1,14 @@
 const toggleBtn = document.querySelector('.header__toggle-btn');
 const mobMenu = document.querySelector('.nav');
+const header = document.querySelector('header');
 
 document.addEventListener('DOMContentLoaded', function () {
   const links = document.querySelectorAll('a[href^="#"]');
 
-  for (let link of links) {
+  links.forEach(link => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
+
       const targetId = this.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
 
@@ -14,8 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
         behavior: 'smooth',
         block: 'start',
       });
+
+      mobMenu.classList.remove('is-open');
+      toggleBtn.classList.remove('is-active');
+      document.documentElement.classList.remove('no-scroll');
     });
-  }
+  });
 });
 
 toggleBtn.addEventListener('click', function () {
@@ -25,7 +31,6 @@ toggleBtn.addEventListener('click', function () {
 });
 
 let lastScrollY = window.scrollY;
-const header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > lastScrollY) {
@@ -35,6 +40,7 @@ window.addEventListener('scroll', () => {
     header.style.transform = 'translateY(0)';
     header.classList.add('scroll');
   }
+
   if (window.scrollY === 0) {
     header.style.transform = 'translateY(0)';
     header.classList.remove('scroll');
