@@ -1,18 +1,14 @@
 .hero {
-  padding-bottom: 0;
+  padding-top: 72px;
   background-image: url(../../images/decor/decor-bg-8-mob-1x.png);
-  background-color: transparent;
+  /*background-color: transparent;*/
   background-repeat: no-repeat;
   background-position: 30% -8%;
   background-size: 320px 704px;
 }
 
-.hero__title {
-  margin: 0;
-}
-
-.hero__text-color {
-  color: var(--accet-green);
+.hero__content {
+  position: relative;
 }
 
 .hero__img-wrapper {
@@ -23,11 +19,12 @@
 .hero__img {
   border-radius: 24px;
   max-width: 340px;
+  width: 100%;
 }
 
-.hero__text {
+.hero__description {
   margin-bottom: 32px;
-  max-width: 320px;
+  max-width: 337px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio),
@@ -35,7 +32,6 @@
   (min-resolution: 196dpi) {
   .hero {
     background-image: url(../../images/decor/decor-bg-8-mob-2x.png);
-    background-color: transparent;
     background-repeat: no-repeat;
     background-position: 30% -8%;
     background-size: 320px 704px;
@@ -45,12 +41,14 @@
 @media screen and (min-width: 768px) {
   .hero {
     padding-top: 60px;
-
     background-image: url(../../images/decor/decor-bg-5-tab-1x.png);
-    background-color: transparent;
     background-repeat: no-repeat;
     background-position: 50% -8%;
     background-size: 704px 896px;
+  }
+
+  .hero__content {
+    margin-bottom: 60px;
   }
 
   .hero__title {
@@ -73,8 +71,8 @@
     position: absolute;
     max-width: 336px;
     height: 336px;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    right: 0;
   }
 
   @media screen and (-webkit-min-device-pixel-ratio),
@@ -82,7 +80,6 @@
     (min-resolution: 196dpi) {
     .hero {
       background-image: url(../../images/decor/decor-bg-5-tab-2x.png);
-      background-color: transparent;
       background-repeat: no-repeat;
       background-position: 50% -8%;
       background-size: 704px 896px;
@@ -101,6 +98,8 @@
 
   .hero__tab-wrapper {
     position: static;
+    margin-bottom: 185px;
+    height: auto;
   }
 
   .hero__title {
@@ -114,11 +113,24 @@
     max-width: 592px;
   }
 
-  .hero__img {
+  .hero__img-wrapper {
     position: absolute;
     top: 0;
-    right: 32px;
-    max-width: 488px;
-    height: auto;
+    right: 0;
+    height: 728px;
+  }
+
+  .hero__img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+  }
+
+  .hero__description {
+    max-width: 592px;
+  }
+
+  .hero__content {
+    margin-bottom: 0;
   }
 }

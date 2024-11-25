@@ -190,6 +190,12 @@
   flex-direction: column;
   justify-content: center;
   transition: opacity var(--animation), visibility var(--animation);
+
+  background-color: var(--bg);
+
+  transition:
+    opacity var(--animation),
+    visibility var(--animation);
 }
 
 .work-together__modal-window.is-open {

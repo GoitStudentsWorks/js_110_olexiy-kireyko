@@ -18,6 +18,7 @@
   --bg-form: var(--light-grey);
   --bg-faq: var(--light-accet);
   --border-faq: var(--light-grey);
+  --bg-btn: var(--light-accet);
 }
 
 [data-theme='dark'] {
@@ -35,6 +36,7 @@
   --bg-form: var(--charcoal);
   --bg-faq: var(--dark-accet);
   --border-faq: var(--white);
+  --bg-btn: var(--dark-accet);
 }
 
 html,
@@ -139,6 +141,27 @@ h3 {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text);
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+  border-radius: 8px;
+  padding: 12px 24px;
+  width: fit-content;
+  text-align: center;
+  background-color: var(--accet-green);
+  border: none;
+  transition: background-color var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-green);
+  }
 }
 
 @media (min-width: 768px) {
