@@ -189,7 +189,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: opacity var(--animation), visibility var(--animation);
+  transition:
+    opacity var(--animation),
+    visibility var(--animation);
 
   background-color: var(--bg);
 
@@ -231,7 +233,6 @@
 .modal-window__close-btn:hover .modal-window__svg,
 .modal-window__close-btn:focus .modal-window__svg {
   fill: var(--accet-green);
-  scale: 1.2;
 }
 
 .modal-window__title {
