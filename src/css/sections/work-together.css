@@ -36,6 +36,7 @@
 .work-together-list__link:focus {
   color: var(--accet-green);
 }
+
 .work-together-list__map:hover,
 .work-together-list__map:focus {
   color: inherit;
@@ -90,7 +91,11 @@
   color: var(--error);
 }
 
-.form__button {
+.form__btn {
+  cursor: pointer;
+}
+
+/* .form__button {
   border-radius: 8px;
   padding: 12px 24px;
   background-color: var(--accet-green);
@@ -107,7 +112,7 @@
 .form__button:hover,
 .form__button:focus {
   background-color: var(--hover-green);
-}
+} */
 
 @media (min-width: 768px) {
   .work-together__content {
@@ -119,7 +124,8 @@
     background-repeat: no-repeat;
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
     .work-together__content {
       background-image: url(/images/decor/decor-bg-7-tab-2x.png);
     }
