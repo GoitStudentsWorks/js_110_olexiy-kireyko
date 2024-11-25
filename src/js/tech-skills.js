@@ -9,10 +9,16 @@ function duplicateContent(containerId) {
 
   const setContentWidth = () => {
     const itemsWidth = originalContent.offsetWidth;
+
     container.style.width = `${itemsWidth * 5}px`;
   };
 
-  window.addEventListener('load', setContentWidth);
+  if (document.readyState === 'complete') {
+    setContentWidth();
+  } else {
+    window.addEventListener('load', setContentWidth);
+  }
+
   window.addEventListener('resize', setContentWidth);
 }
 
