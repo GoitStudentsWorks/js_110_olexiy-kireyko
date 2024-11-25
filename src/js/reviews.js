@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import iziToast from 'izitoast';
 
 const BASE_URL = 'https://portfolio-js.b.goit.study';
@@ -9,24 +9,22 @@ const END_POINT = '/api/reviews';
 const swiperList = document.querySelector('.reviews__swiper-list');
 
 const swiper = new Swiper('.reviews__swiper', {
-  modules: [Navigation],
+  modules: [Navigation, Keyboard],
+  keyboard: {
+    enabled: true,
+  },
   navigation: {
     nextEl: '.swiper__btn-next',
     prevEl: '.swiper__btn-prev',
   },
   speed: 400,
+  spaceBetween: 32,
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 300,
-    },
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 300,
     },
     1280: {
       slidesPerView: 2,
-      spaceBetween: 32,
       centerInsufficientSlides: true,
     },
   },
@@ -61,11 +59,19 @@ getReviews()
     swiperList.innerHTML = markupReviews(data);
     swiper.update();
   })
-  .catch(Error => {
-    iziToast.show({
+  .catch(error => {
+    iziToast.error({
+      icon: '',
+      titleColor: 'var(--text)',
       message: 'Reviews not found',
+      backgroundColor: 'var(--error)',
+      messageColor: 'var(--text)',
+      closeOnEscape: true,
+      position: 'topCenter',
+      transitionIn: 'flipInX',
+      transitionOut: 'flipOutX',
     });
-    swiperList.innerHTML = `<li>
-                              <p class="p-l">Not found</p>
-                            </li>`;
+    document
+      .querySelector('.reviews__swiper')
+      .innerHTML = `<p class="p-l" style="text-align: center">Not found</p>`;
   });

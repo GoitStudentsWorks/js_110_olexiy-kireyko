@@ -67,20 +67,20 @@
 }
 
 @keyframes scroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(-50%);
+  100% {
+    transform: translateX(calc(-100% / 5));
   }
 }
 
 .skills__line-top .skills__content {
-  animation: scroll 30s ease-in-out infinite;
+  animation: scroll 10s ease-in-out infinite;
 }
 
 .skills__line-bottom .skills__content {
-  animation: scroll 50s linear infinite;
+  animation: scroll 20s linear infinite;
   animation-fill-mode: forwards;
 }
 
