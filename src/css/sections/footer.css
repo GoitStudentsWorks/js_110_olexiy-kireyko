@@ -22,6 +22,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 32px;
+  cursor: pointer;
 }
 
 .footer__list {
