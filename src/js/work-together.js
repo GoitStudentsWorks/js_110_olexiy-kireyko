@@ -9,6 +9,7 @@ const emailField = form.querySelector('.form__email');
 const textareaField = document.querySelector('.form__textarea');
 const emailCheckRight = document.querySelector('.form__svg-check-right');
 const emailCheckWrong = document.querySelector('.form__email-check-wrong');
+const html = document.querySelector('html');
 
 const wtContent = document.querySelector('.work-together__modal-part');
 
@@ -86,6 +87,7 @@ function sendForm(event) {
       </div>`;
 
       wtContent.innerHTML = markup;
+      html.classList.add('no-scroll');
 
       form.reset();
       const modalWindow = document.querySelector(
@@ -99,6 +101,7 @@ function sendForm(event) {
         if (modalWindow.classList.contains('is-open')) {
           modalWindow.classList.remove('is-open');
           document.removeEventListener('keydown', handleEscapeKey);
+          html.classList.remove('no-scroll');
         }
       };
 
