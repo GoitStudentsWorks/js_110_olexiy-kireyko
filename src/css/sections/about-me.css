@@ -27,9 +27,6 @@
   position: relative;
   padding-left: 32px;
 }
-.about-me__item-second {
-  padding-left: 24px;
-}
 .about-me__item::before {
   content: '';
   position: absolute;
@@ -39,9 +36,6 @@
   background: var(--accet-green);
   left: 10px;
   top: 10px;
-}
-.about-me__item.about-me__item-second::before {
-  left: 6px;
 }
 @media (min-width: 768px) {
   .about-me__container {
