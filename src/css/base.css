@@ -63,7 +63,7 @@ body {
 }
 
 @font-face {
-  font-family: 'Impact', sans-serif;
+  font-family: var(--font-second), sans-serif;
   src: url('./fonts/impact.ttf') format('truetype');
   font-style: normal;
 }
