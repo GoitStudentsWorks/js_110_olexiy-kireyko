@@ -24,10 +24,6 @@
   margin-bottom: 32px;
 }
 
-.footer__logo-color {
-  color: var(--accet-green);
-}
-
 .footer__list {
   margin-bottom: 40px;
   display: flex;

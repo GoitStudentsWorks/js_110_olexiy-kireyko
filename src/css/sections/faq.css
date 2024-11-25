@@ -2,10 +2,6 @@
   margin-bottom: 40px;
 }
 
-.faq__title-span {
-  color: var(--accet-green);
-}
-
 .faq__acc-item {
   border-radius: 0;
   border-bottom: 1px solid var(--border-faq);

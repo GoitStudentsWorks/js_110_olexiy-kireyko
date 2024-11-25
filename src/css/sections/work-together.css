@@ -6,10 +6,6 @@
   margin-bottom: 40px;
 }
 
-.text__color {
-  color: var(--accet-green);
-}
-
 .work-together__text {
   max-width: 320px;
   margin-bottom: 32px;
@@ -39,6 +35,10 @@
 .work-together-list__link:hover,
 .work-together-list__link:focus {
   color: var(--accet-green);
+}
+.work-together-list__map:hover,
+.work-together-list__map:focus {
+  color: inherit;
 }
 
 .work-together__form {
