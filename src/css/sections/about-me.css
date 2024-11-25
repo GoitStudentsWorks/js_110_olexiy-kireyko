@@ -50,7 +50,7 @@
     background-image: url(/images/decor/decor-bg-6-tab-1x.png);
     background-color: transparent;
     background-repeat: no-repeat;
-    background-position: 98% 85%;
+    background-position: 98% 84%;
     background-size: 336px 252px;
   }
   .about-me__box {
@@ -64,6 +64,10 @@
   .about-me__bio {
     margin-bottom: 80px;
   }
+
+  .about-me__list {
+    gap: 16px;
+  }
 }
 @media (min-width: 1280px) {
   .about-me__container {
@@ -76,7 +80,6 @@
   .about-me__box {
     overflow: visible;
     margin-left: 208px;
-    display: grid;
     grid-template-columns: 384px 384px;
     gap: 80px 136px;
   }
