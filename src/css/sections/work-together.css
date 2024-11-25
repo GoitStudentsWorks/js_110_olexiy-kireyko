@@ -95,25 +95,6 @@
   cursor: pointer;
 }
 
-/* .form__button {
-  border-radius: 8px;
-  padding: 12px 24px;
-  background-color: var(--accet-green);
-  border: none;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: var(--white);
-  transition: background-color var(--animation);
-}
-
-.form__button:hover,
-.form__button:focus {
-  background-color: var(--hover-green);
-} */
-
 @media (min-width: 768px) {
   .work-together__content {
     background-image: url(/images/decor/decor-bg-7-tab-1x.png);
@@ -146,9 +127,6 @@
     margin-bottom: 60px;
   }
 
-  .form__button {
-    max-width: 173px;
-  }
 }
 
 @media (min-width: 1280px) {
