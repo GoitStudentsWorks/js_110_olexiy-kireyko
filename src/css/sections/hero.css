@@ -27,6 +27,24 @@
   max-width: 337px;
 }
 
+.social__list {
+  padding: 32px 0;
+  background-color: var(--bg-form);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social__link {
+  transition: color var(--animation);
+}
+
+.social__link:hover {
+  color: var(--accet-green);
+}
+
 @media screen and (-webkit-min-device-pixel-ratio),
   (min-resolution: 2dppx),
   (min-resolution: 196dpi) {
@@ -39,6 +57,13 @@
 }
 
 @media screen and (min-width: 768px) {
+  /* main {
+    padding-top: 88px;
+  } */
+  main {
+    padding-top: 16px;
+  }
+
   .hero {
     padding-top: 60px;
     background-image: url(../../images/decor/decor-bg-5-tab-1x.png);
@@ -73,6 +98,11 @@
     height: 336px;
     bottom: 0;
     right: 0;
+  }
+
+  .social__list {
+    flex-direction: row;
+    gap: 40px;
   }
 
   @media screen and (-webkit-min-device-pixel-ratio),

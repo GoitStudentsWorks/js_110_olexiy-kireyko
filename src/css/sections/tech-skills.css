@@ -42,7 +42,8 @@
 
 .skills__item {
   color: var(--text);
-  font-weight: 500;
+  font-family: 'PoppinsRegular';
+  /* font-weight: 500; */
   font-size: 32px;
   line-height: 1.25;
   text-transform: uppercase;
