@@ -105,8 +105,7 @@
     background-repeat: no-repeat;
   }
 
-  @media (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .work-together__content {
       background-image: url(/images/decor/decor-bg-7-tab-2x.png);
     }
@@ -126,7 +125,6 @@
     gap: 16px;
     margin-bottom: 60px;
   }
-
 }
 
 @media (min-width: 1280px) {
@@ -173,15 +171,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition:
-    opacity var(--animation),
-    visibility var(--animation);
+  transition: opacity var(--animation), visibility var(--animation);
 
   background-color: var(--bg);
 
-  transition:
-    opacity var(--animation),
-    visibility var(--animation);
+  transition: opacity var(--animation), visibility var(--animation);
 }
 
 .work-together__modal-window.is-open {
@@ -220,7 +214,8 @@
 }
 
 .modal-window__title {
-  font-weight: 400;
+  font-family: 'PoppinsLight';
+  /* font-weight: 400; */
   font-size: 20px;
   line-height: 1.6;
   letter-spacing: 0.03em;
